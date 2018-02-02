@@ -1,564 +1,510 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-    <meta name="theme-color" content="#2196F3">
-    <title>Material UI One Page Theme</title>
 
-    <!-- CSS  -->
-    <link href="public/css/style.css" type="text/css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <title>Half Slider - Start Bootstrap Template</title>
 
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 
-
-
-    <!-- JQuery minified -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
 
 
-    <!-- font-awesome cdn -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- Optional theme -->
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="public/css/index.css" rel="stylesheet">
 
 </head>
 
-<body id="top" class="scrollspy">
+<body>
 
-    <!-- Pre Loader -->
-    <div id="loader-wrapper">
-        <div id="loader"></div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Aguirre Diesel</a>
 
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
 
-    </div>
+            <!-- Aside Phone ===============================================-->
+            <aside id="pc">
+                <i class="fa fa-phone-square"></i>
+                <span>Call Us 24/7:</span>
+                <a href="tel:979-583-8406">979-583-8406</a>
+            </aside>
 
-    <!--Navigation-->
-    <div class="navbar-fixed">
-        <nav id="nav_f" class="default_color" role="navigation">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <a href="#" id="logo-container" class="brand-logo">AGUIRRE DIESEL SERVICE</a>
-                    <ul class="right hide-on-med-and-down">
-                        <li>
-                            <a href="#intro">About</a>
-                        </li>
-                        <li>
-                            <a href="#work">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="#team">Skills</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                        <li class="download">
-                            <a href="public/img/resume.docx" download="Ismael_Barba">
-                                <img border="0" src="public/img/resume2.png" alt="Resume" width="104" height="104">
-                            </a>
-                        </li>
-                    </ul>
-                    <ul id="nav-mobile" class="side-nav">
-                        <li>
-                            <a href="#intro">About</a>
-                        </li>
-                        <li>
-                            <a href="#work">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="#team">skills</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                        <li class="download">
-                            <a href="public/img/resume.docx" download="Ismael_Barba">
-                                <img border="0" src="public/img/resume2.png" alt="Resume" width="104" height="104">
-                            </a>
-                        </li>
-                    </ul>
-                    <a href="#" data-activates="nav-mobile" class="button-collapse">
-                        <i class="mdi-navigation-menu"></i>
-                    </a>
+
+            <!--=============================================================-->
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section2">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section3">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section4">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Carousel-->
+
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image: url('public/img/slider22.png')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>First Slide</h3>
+                        <p>This is a description for the first slide.</p>
+                    </div>
+                </div>
+                <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('img/slider3.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Second Slide</h3>
+                        <p>This is a description for the second slide.</p>
+                    </div>
+                </div>
+                <!-- Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('img/slider4.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Third Slide</h3>
+                        <p>This is a description for the third slide.</p>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </div>
-
-    <!--Hero-->
-    <!--<div class="section no-pad-bot" id="index-banner">
-        <div class="container">
-            <h1 class="text_h center header cd-headline letters type">
-                <span>I Love</span>
-                <span class="cd-words-wrapper waiting">
-                    <b class="is-visible">creating</b>
-                    <b>designing</b>
-                    <b>developing</b>
-                </span>
-            </h1>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-    </div>-->
+    </header>
 
-    <div class="slider">
-        <ul class="slides">
-            <li>
-                <img src="public/img/slider2.jpg">
-                <!-- random image -->
-                <div class="caption center-align">
-                    <h3>This is our big Tagline!</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                </div>
-            </li>
-            <li>
-                <img src="public/img/slider3.jpg">
-                <!-- random image -->
-                <div class="caption left-align">
-                    <h3>Left Aligned Caption</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                </div>
-            </li>
-            <li>
-                <img src="public/img/slider4.jpg">
-                <!-- random image -->
-                <div class="caption right-align">
-                    <h3>Right Aligned Caption</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                </div>
-            </li>
-            <li>
-                <img src="public/img/slider5.png">
-                <!-- random image -->
-                <div class="caption center-align">
-                    <h3>This is our big Tagline!</h3>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <script type="text/javascript">
+    <!--IDK-->
+    <script>
         $(document).ready(function () {
-            $('.slider').slider({ full_width: true });
+            jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 2000  // 2 seconds
         });
     </script>
 
 
-    <!--Intro and service-->
-    <div id="intro" class="section scrollspy">
+    <!--First Section-->
+
+    <section class="container-fluid" id="section1">
+        <h1 class="text-center v-center">Sectionalize.</h1>
+
         <div class="container">
             <div class="row">
-                <div class="col s12">
-                    <h2 class="center header text_h2"> Welcome, to 
-                        <span class="span_h2">Aguirre Diesel Service</span>. We are your full 24 hour service/road mobile diesel mechanics. 
-                        more talk of who we are.
-                        <span class="span_h2">Something %%%%.</span>
-                        Also you can contact me at
-                        <span class="span_h2">979-583-8406</span> or you can shoot over a email to 
-                        <span class="span_h2">info@aguirrediesel.com.</span>
-                    </h2>
-                </div>
-
-                <div class="profile col s12 m4 l4">
-                    <div class="center promo promo-example">
-                        <i class="mdi-image-flash-on"></i>
-                        <h5 class="promo-caption">Placeholder</h5>
-                        <p class="light center">more info
-                            more info</p>
-                        <div class="marine2">
-                            <img class="marine" src="public/img/marine.png">
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-sm-10 col-sm-offset-2 text-center">
+                            <h3>Robust</h3>
+                            <p>There is other content and snippets of details or features that can be placed here..</p>
+                            <i class="fa fa-cog fa-5x"></i>
                         </div>
                     </div>
                 </div>
-                <div class="ismael col s12 m4 l4">
-
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="ismael activator" src="public/img/ismael.png">
-                        </div>
-
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Placeholder 2
-                                <i class="mdi-navigation-close right"></i>
-                            </span>
-                            <p>Not sure what we will do here yet</p>
+                <div class="col-sm-4 text-center">
+                    <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1 text-center">
+                            <h3>Simple</h3>
+                            <p>You may also want to create content that compells users to scroll down more..</p>
+                            <i class="fa fa-user fa-5x"></i>
                         </div>
                     </div>
-
                 </div>
-                <div class="col s12 m4 l4">
-                    <div class="center promo promo-example">
-                        <i class="mdi-hardware-desktop-windows"></i>
-                        <h5 class="promo-caption">More info on fixing shit will go here</h5>
-                        <p class="light center">Services we provide here at aguirrediesel.com
-                        </p>
-                        <div class="marine2">
-                            <img class="marine" src="public/img/SMU.png">
+                <div class="col-sm-4 text-center">
+                    <div class="row">
+                        <div class="col-sm-10 text-center">
+                            <h3>Clean</h3>
+                            <p>In the first 30 seconds of a user's visit to your site they decide if they're going to stay..</p>
+                            <i class="fa fa-mobile fa-5x"></i>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!--Work-->
-    <div class="section scrollspy" id="work">
-        <div class="container">
-            <h2 class="header text_b">Portfolio </h2>
+            <!--/row-->
             <div class="row">
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="public/img/hatter2.png">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Mad As A Hatter - Hat Shop
-                                <i class="mdi-navigation-more-vert right"></i>
-                            </span>
-                            <p>
-                                <a href="https://github.com/IsmaelBarba/HatShop">Project link</a>
-                            </p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Project Title
-                                <i class="mdi-navigation-close right"></i>
-                            </span>
-                            <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="public/img/helpnow.png">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">The Help Now App
-                                <i class="mdi-navigation-more-vert right"></i>
-                            </span>
-                            <p>
-                                <a href="#">Project link</a>
-                            </p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Project Title
-                                <i class="mdi-navigation-close right"></i>
-                            </span>
-                            <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="public/img/sons.png">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">SOA - Random Quote Generator
-                                <i class="mdi-navigation-more-vert right"></i>
-                            </span>
-                            <p>
-                                <a href="https://codepen.io/ismaelbarba/pen/MJeNdZ">Project link</a>
-                            </p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Project Title
-                                <i class="mdi-navigation-close right"></i>
-                            </span>
-                            <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="public/img/calc.png">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Project Title
-                                <i class="mdi-navigation-more-vert right"></i>
-                            </span>
-                            <p>
-                                <a href="https://codepen.io/ismaelbarba/pen/oByayO?editors=1000">Project link</a>
-                            </p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Project Title
-                                <i class="mdi-navigation-close right"></i>
-                            </span>
-                            <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="public/img/project5.png">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Project Title
-                                <i class="mdi-navigation-more-vert right"></i>
-                            </span>
-                            <p>
-                                <a href="#">Project link</a>
-                            </p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Project Title
-                                <i class="mdi-navigation-close right"></i>
-                            </span>
-                            <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="public/img/project6.jpeg">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Project Title
-                                <i class="mdi-navigation-more-vert right"></i>
-                            </span>
-                            <p>
-                                <a href="#">Project link</a>
-                            </p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Project Title
-                                <i class="mdi-navigation-close right"></i>
-                            </span>
-                            <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                        </div>
-                    </div>
-                </div>
+                <br>
             </div>
         </div>
-    </div>
+        <!--/container-->
+    </section>
 
-    <!--Parallax-->
-    <div class="parallax-container">
-        <div class="parallax">
-            <img src="public/img/dallas1.jpg">
-        </div>
-    </div>
-
-    <!--SKILLS-->
-    <div class="section scrollspy" id="team">
-        <h2 class="header text_b text-center">Skills </h2>
-        <div class="container">
-            <div class="row skills">
-                <div class="col s12 m3">
-                    <div class="card card-avatar">
-                        <div class="waves-effect waves-block waves-light">
-                            <img class="activator" src="public/img/html.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m3">
-                    <div class="card card-avatar">
-                        <div class="waves-effect waves-block waves-light">
-                            <img class="activator" src="public/img/css.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m3">
-                        <div class="card card-avatar">
-                            <div class="waves-effect waves-block waves-light">
-                                <img class="activator" src="public/img/javascript2.png">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m3">
-                        <div class="card card-avatar">
-                            <div class="waves-effect waves-block waves-light">
-                                <img class="activator" src="public/img/bootstrap.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section class="container-fluid" id="section2">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <h1>What is Bootstrap?</h1>
+                <br>
+                <p class="lead">Bootstrap is a free collection of tools for creating websites and web applications. It contains HTML and
+                    CSS-based design templates for typography, forms, buttons, navigation and other interface components,
+                    as well as optional JavaScript extensions. It is the No.1 project on GitHub with 65,000+ stars and 23,800
+                    forks (as of March 2014) [1] and has been used by NASA and MSNBC, among many others..</p>
+                <br>
+                <i style="font-size:120px" class="fa fa-camera fa-5x"></i>
+                <p>Big 'ol Camera Icon</p>
             </div>
         </div>
+    </section>
 
-        <div class="container">
-            <div class="row skills">
-                <div class="col s12 m3">
-                    <div class="card card-avatar">
-                        <div class="waves-effect waves-block waves-light">
-                            <img class="activator" src="public/img/jquery3.png">
+    <!-- Section #3 -->
+    <section class="container-fluid power" id="section3">
+        <div class="reasons">
+            <div class="row power">
+                <div class="col left-side">
+                    <div class="inside">
+                        <div class="text">
+                            <h2 class="reasonto">8 Reasons to Choose
+                                <span class="powerflo">Aguirre Diesel</span>
+                            </h2>
+                            <p>
+                                <a href="/contact-us" class="btn schedule">Schedule Your Service</a>
+                            </p>
+                            <p>
+                                <a href="https://www.bbb.org/houston/business-reviews/mobile-truck-repair/aguirre-diesel-services-in-pasadena-tx-90047303"
+                                    target="_blank">
+                                    <img src="img/bbb.png" class="bbb" width="25%">
+                                </a>
+                                <!-- <img src="/assets/images/theme/bbb.png" />-->
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m3">
-                    <div class="card card-avatar">
-                        <div class="waves-effect waves-block waves-light">
-                            <img class="activator" src="public/img/node.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m3">
-                        <div class="card card-avatar">
-                            <div class="waves-effect waves-block waves-light">
-                                <img class="activator" src="public/img/express2.png">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m3">
-                        <div class="card card-avatar">
-                            <div class="waves-effect waves-block waves-light">
-                                <img class="activator" src="public/img/mongo.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="container">
-            <div class="row skills">
-                <div class="col s12 m3">
-                    <div class="card card-avatar">
-                        <div class="waves-effect waves-block waves-light">
-                            <img class="activator" src="public/img/mysql2.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m3">
-                    <div class="card card-avatar">
-                        <div class="waves-effect waves-block waves-light">
-                            <img class="activator" src="public/img/firebase.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m3">
-                        <div class="card card-avatar">
-                            <div class="waves-effect waves-block waves-light">
-                                <img class="activator" src="public/img/react3.png">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m3">
-                        <div class="card card-avatar">
-                            <div class="waves-effect waves-block waves-light">
-                                <img class="activator" src="public/img/java.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row skills">
-                <div class="col s12 m3">
-                    <div class="card card-avatar">
-                        <div class="waves-effect waves-block waves-light">
-                            <img class="activator" src="public/img/handlebars.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m3">
-                    <div class="card card-avatar">
-                        <div class="waves-effect waves-block waves-light">
-                            <img class="activator" src="public/img/passport.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m3">
-                        <div class="card card-avatar">
-                            <div class="waves-effect waves-block waves-light">
-                                <img class="activator" src="public/img/heroku.png">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m3">
-                        <div class="card card-avatar">
-                            <div class="waves-effect waves-block waves-light">
-                                <img class="activator" src="public/img/sequelize.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!--Footer-->
-    <footer id="contact" class="page-footer default_color scrollspy">
-
-
-        <div class="col-s12" id="center-foot">
-
-            <div class="row">
-
-                <!--<div class="col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">-->
-                <div class- "mail2">
-                    <div class="col-sm-4 col-xs-6">
-                        <!-- Gmail address -->
-                        <a href="mailto:ismaelbarba1@gmail.com">
-                            <img src="public/img/gmail.png" class="social mail">
+                <div class="col right-side">
+                    <div class="reason-right">
+                        <a href="#" target="blank">
+                            <img src="img/clipboard2.png" class="clipboard">
+                            <!--https://www.mechanicshub.com/wp-content/uploads/mechanics-hub-slider1-bg.jpg-->
                         </a>
                     </div>
                 </div>
-
-                <div class="col-sm-4 col-xs-6">
-                    <!-- Github address -->
-                    <a href="https://github.com/IsmaelBarba" target="_blank">
-                        <img src="public/img/github.png" class="social github">
-                    </a>
-                </div>
-
-                <div class="col-sm-4 col-xs-6">
-                    <!-- Linkedin Address -->
-                    <a href="https://www.linkedin.com/in/ismael-barba-12678549/" target="_blank">
-                        <img src="public/img/linked.png" class="social linked">
-                    </a>
-                </div>
-
-                <!--</div>-->
-
             </div>
-
-
-            <div class="col-s12 col-m3">
-                <h5 class="white-text footer-text">ismaelbarba.github.io</h5>
-                <ul>
-
-                </ul>
-            </div>
-
         </div>
 
+    </section>
 
-
-
-        <div class="footer-copyright default_color">
-            <div class="container" id="copyright">
-                Made by
-                <a class="white-text" href="https://github.com/IsmaelBarba">Ismael Barba</a>.
-                <a class="white-text" href="https://github.com/IsmaelBarba">Copyright
-                    <i class="far fa-copyright"></i> 2018 </a>
+    <!-- Section #4 -->
+    <section class="container-fluid" id="section4">
+        <h2 class="text-center">Change this Content. Change the world.</h2>
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <img src="/assets/example/bg_smartphones.jpg" class="img-responsive center-block ">
+                <p class="text-center">Images will scale down proportionately as browser width narrows.</p>
             </div>
+        </div>
+    </section>
+
+    <section class="container-fluid" id="section5">
+        <div class="col-sm-10 col-sm-offset-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item active">
+                                <h2 class="list-group-item-heading">Basic</h2>
+                                <h6>Free to get started</h6>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Option 100 - more about this</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Option 2 - this is more about this</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Option 3 GB</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Option 4</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Feature</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Feature</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <button class="btn btn-primary btn-lg btn-block">Get Started</button>
+                            </a>
+                        </div>
+                    </div>
+                    <!--/left-->
+
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="list-group text-center">
+                            <a href="#" class="list-group-item active">
+                                <h2 class="list-group-item-heading">Better</h2>
+                                <h6>Most popular plan</h6>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Option 200 - more about this</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Option 2 - this is more about this</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Option 5 GB</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Option 6</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Feature</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Feature</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <button class="btn btn-default btn-lg btn-block">$10 per month</button>
+                            </a>
+                        </div>
+                    </div>
+                    <!--/middle-->
+
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="list-group text-right">
+                            <a href="#" class="list-group-item active">
+                                <h2 class="list-group-item-heading">Best</h2>
+                                <h6>For enterprise grade</h6>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Option 100 - more about this</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Option 2 - this is more about this</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Option 8 GB</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Option 10</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Unlimited</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <p class="list-group-item-text">Unlimited</p>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <button class="btn btn-default btn-lg btn-block">$20 per month</button>
+                            </a>
+                        </div>
+                    </div>
+                    <!--/right-->
+
+                </div>
+                <!--/row-->
+            </div>
+            <!--/container-->
+        </div>
+    </section>
+
+    <section class="container-fluid" id="section6">
+        <h2 class="text-center">Do you see what I mean?</h2>
+        <p class="text-center lead">Add some compelling information here</p>
+        <img src="/assets/example/bg_iphone.png" class="img-responsive center-block ">
+
+    </section>
+
+    <section class="container" id="section7">
+        <h1 class="text-center">Social Media Fascination</h1>
+        <div class="row">
+            <!--fontawesome icons-->
+            <div class="col-sm-1 col-sm-offset-2 col-xs-4 text-center">
+                <i class="fa fa-github fa-4x"></i>
+            </div>
+            <div class="col-sm-1 col-xs-4 text-center">
+                <i class="fa fa-foursquare fa-4x"></i>
+            </div>
+            <div class="col-sm-1 col-xs-4 text-center">
+                <i class="fa fa-facebook fa-4x"></i>
+            </div>
+            <div class="col-sm-1 col-xs-4 text-center">
+                <i class="fa fa-pinterest fa-4x"></i>
+            </div>
+            <div class="col-sm-1 col-xs-4 text-center">
+                <i class="fa fa-google-plus fa-4x"></i>
+            </div>
+            <div class="col-sm-1 col-xs-4 text-center">
+                <i class="fa fa-twitter fa-4x"></i>
+            </div>
+            <div class="col-sm-1 col-xs-4 text-center">
+                <i class="fa fa-dribbble fa-4x"></i>
+            </div>
+            <div class="col-sm-1 col-xs-4 text-center">
+                <i class="fa fa-instagram fa-4x"></i>
+            </div>
+        </div>
+        <!--/row-->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <br>
+                <br>
+                <p>
+                    <a href="http://www.bootstrapzero.com/bootstrap-template/sectionalize">Get the code for this template.</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-3 column">
+                    <h4>Information</h4>
+                    <ul class="nav">
+                        <li>
+                            <a href="about-us.html">Products</a>
+                        </li>
+                        <li>
+                            <a href="about-us.html">Services</a>
+                        </li>
+                        <li>
+                            <a href="about-us.html">Benefits</a>
+                        </li>
+                        <li>
+                            <a href="elements.html">Developers</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-md-3 column">
+                    <h4>Follow Us</h4>
+                    <ul class="nav">
+                        <li>
+                            <a href="#">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#">Google+</a>
+                        </li>
+                        <li>
+                            <a href="#">Pinterest</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-md-3 column">
+                    <h4>Contact Us</h4>
+                    <ul class="nav">
+                        <li>
+                            <a href="#">Email</a>
+                        </li>
+                        <li>
+                            <a href="#">Headquarters</a>
+                        </li>
+                        <li>
+                            <a href="#">Management</a>
+                        </li>
+                        <li>
+                            <a href="#">Support</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-md-3 column">
+                    <h4>Customer Service</h4>
+                    <ul class="nav">
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Delivery Information</a>
+                        </li>
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms &amp; Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/row-->
         </div>
     </footer>
 
 
 
-    <!--  Scripts-->
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+
+
 
     <script src="scroll.js"></script>
 
     <script>
+
+        /* activate scrollspy menu */
+        $('body').scrollspy({
+            target: '#navbar-collapsible',
+            offset: 50
+        });
+
+        /* smooth scrolling sections */
+        $('a[href*=#]:not([href=#])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top - 50
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+
+
     </script>
 </body>
 
