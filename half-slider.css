@@ -1,9 +1,11 @@
-* {
+*{
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
 }
 
+
 #pc {
+  
     display: inline-block;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -20,6 +22,7 @@
     text-align: center;
     white-space: pre-wrap;
 }
+
 
 .carousel-item {
     height: 90vh;
@@ -153,17 +156,23 @@ footer .nav>li>a:hover {
     /*background-size: 100%;*/
 }
 
-@media (min-width: 992px) {
-    .reasons {
-        margin-top: 6%;
-    }
+@media (min-width: 992px)  {
+
+.reasons {
+    margin-top: 6%;
+}
 }
 
-.bbb {}
+
+
+.bbb {
+    
+}
 
 .left-side {
     margin-left: 20px;
     background-color: ;
+  
 }
 
 .reasonto {
@@ -175,11 +184,13 @@ footer .nav>li>a:hover {
     font-weight: 600;
     font-size: 2.4rem;
     line-height: 1.1;
+
 }
 
 .powerflo {
     display: block;
     font-size: 5.0rem;
+    
     color: white;
 }
 
@@ -202,12 +213,15 @@ footer .nav>li>a:hover {
 }
 
 @media screen and (max-width: 780px) {
-    .right-side {
-        background-color: ;
-    }
+
+.right-side {
+    background-color: ;
+}
 }
 
-.reason-right {}
+.reason-right {
+    
+}
 
 .clipboard {
     width: ;
@@ -216,5 +230,7 @@ footer .nav>li>a:hover {
 }
 
 .power {
-    /* background: url('img/black-steel.jpg') no-repeat;*/
+   /* background: url('img/black-steel.jpg') no-repeat;*/
+    
+  
 }
