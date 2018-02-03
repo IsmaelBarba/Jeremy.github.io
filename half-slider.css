@@ -27,10 +27,10 @@
 
 
 .call {
-    margin-top: -20px;
+
 }
 
- #pc {
+ /* #pc {
   
     display: inline-block;
     margin-bottom: 10px;
@@ -47,7 +47,7 @@
     letter-spacing: 1px;
     text-align: center;
     white-space: pre-wrap;
-} 
+}  */
 
 .number {
     background-color: ;
@@ -78,7 +78,8 @@
 }*/
 
 .navbar-toggler {
-    background-color: white;
+    background-color: rgb(75, 74, 74);
+   
 }
 
 html,
@@ -225,6 +226,10 @@ footer .nav>li>a:hover {
     color: white;
 }
 
+
+
+
+
 .schedule {
     display: inline-block;
     margin-bottom: 45px;
@@ -273,19 +278,65 @@ footer .nav>li>a:hover {
 
 
 
+.navbar-toggler {
+    margin-top: -100px;
+    background-color: rgb(75, 74, 74);
+}
+
+.aguirre2 {
+    margin-left: -20px;
+    
+    width: 310px;
+
+}
+
+.call {
+    margin-top: -100px;
+    width: 300px;
+    background-color: ;
+}
+
+ /* #pc {
+     display: inline-block;
+     margin-bottom: 1px;
+     margin-top: 1px;
+     padding: 1px 1px;
+     background: #e70000;
+     color: #fff !important;
+     font-family: "Oswald", Arial, "Helvetica Neue", Helvetica, sans-serif;
+     font-size: 1.1em;
+     text-transform: uppercase;
+     border: none;
+     border-radius: 15px;
+     line-height: 1.0;
+     letter-spacing: 1px;
+     text-align: center;
+     white-space: pre-wrap;
+ } */
+
+.powerflo {
+    display: block;
+    font-size: 3.0rem;
+    
+    color: white;
+}
+
 .clipboard {
     width: 300px;
 }
 
 .logo {
-    width: 100px;
+    width: 150px;
     padding: 1px 1px;
-    margin-left: -100px;
+    margin-left: 0px;
+    margin-top: -40px;
 }
 
 .aguirre {
-    font-size: 25px;
+   
+    font-size: 1.5em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 5px;
 }
 
 
