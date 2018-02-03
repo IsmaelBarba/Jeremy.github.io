@@ -10,10 +10,14 @@
     
 }
 
-.aguirre {
-    font-size: 50px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.call2 {
+    width: 400px;
+    height: 
     
+}
+
+#call2 {
+    width: 400px;
 }
 
 .fixed-top {
@@ -27,7 +31,9 @@
 
 
 .call {
-
+    width: 300px;
+    height: 130px;
+    margin-right: 40px;
 }
 
  /* #pc {
@@ -279,40 +285,26 @@ footer .nav>li>a:hover {
 
 
 .navbar-toggler {
-    margin-top: -100px;
+    margin-top: 0px;
     background-color: rgb(75, 74, 74);
 }
 
-.aguirre2 {
+.call2 {
     margin-left: -20px;
     
-    width: 310px;
+}
 
+#call2 {
+    width: 300px;
 }
 
 .call {
-    margin-top: -100px;
+    margin-top: 0px;
     width: 300px;
     background-color: ;
 }
 
- /* #pc {
-     display: inline-block;
-     margin-bottom: 1px;
-     margin-top: 1px;
-     padding: 1px 1px;
-     background: #e70000;
-     color: #fff !important;
-     font-family: "Oswald", Arial, "Helvetica Neue", Helvetica, sans-serif;
-     font-size: 1.1em;
-     text-transform: uppercase;
-     border: none;
-     border-radius: 15px;
-     line-height: 1.0;
-     letter-spacing: 1px;
-     text-align: center;
-     white-space: pre-wrap;
- } */
+
 
 .powerflo {
     display: block;
@@ -328,8 +320,8 @@ footer .nav>li>a:hover {
 .logo {
     width: 150px;
     padding: 1px 1px;
-    margin-left: 0px;
-    margin-top: -40px;
+    margin-left: -10px;
+    margin-top: -20px;
 }
 
 .aguirre {
