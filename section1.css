@@ -66,6 +66,36 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     color: white;
 }
 
+.sidebar-btn {
+    display: block;
+    padding: 10px 12px;
+    text-align: center;
+    color: white;
+    background: #e6001c;
+    border-radius: 4px;
+    font-family: 'raleway';
+    font-weight: 700;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+}
+
+.sidebar-btn {
+    display: block;
+    padding: 10px 12px;
+    text-align: center;
+    color: white;
+    background: #e6001c;
+    border-radius: 4px;
+    font-family: 'raleway';
+    font-weight: 700;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+}
+
 
 @media (min-width: 992px){
 
