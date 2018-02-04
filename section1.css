@@ -38,11 +38,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .map {
     padding: 5px;
     width: 350px;
-    height: auto;
+    /* height: auto;
     border-radius: 4px 4px 0 0;
     background: #072f57 url(../images/blue-bar-bg.png) repeat-x;
     border: 4px solid #be0017;
-    border-bottom: 4px solid #be0017;
+    border-bottom: 4px solid #be0017; */
     
 }
 
