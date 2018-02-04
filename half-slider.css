@@ -66,7 +66,7 @@
 }*/
 
 .navbar-toggler {
-    background-color: rgb(75, 74, 74);
+    background-color: black;
    
 }
 
@@ -82,14 +82,14 @@ body {
 }
 
 .navbar-trans {
-    background-color: #279ddd;
+    background-color: black;
     color: #fff;
 }
 
 .navbar-trans li>a:hover,
 .navbar-trans li>a:focus,
 .navbar-trans li.active {
-    background-color: #38afef;
+    background-color: black;
 }
 
 .navbar-trans a {
@@ -120,12 +120,14 @@ section {
 
 a.list-group-item.active,
 [class*='-info'] {
-    background-color: #168ccc;
+    background-color: #283d49;
+    
     color: #fff;
 }
 
 #section1 {
-    background-color: #168ccc;
+    background-color: black;
+    
     color: #dedeff;
 }
 
@@ -135,7 +137,8 @@ a.list-group-item.active,
 }
 
 #section3 {
-    background-color: #168ccc;
+    background-color: black;
+    
     color: #ddd;
 }
 
