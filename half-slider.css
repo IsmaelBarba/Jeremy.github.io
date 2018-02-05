@@ -182,7 +182,11 @@ footer .nav>li>a:hover {
 }
 
 
-
+#section2 {
+    color: red;
+    background: url('img/metal.jpg') no-repeat;
+    background-size: cover;
+}
 
 
 
