@@ -361,6 +361,7 @@ footer .nav>li>a:hover {
 
     .call {
         width: 50px;
+        margin-left: -100px;
     }
 
     .navbar-toggler {
@@ -376,9 +377,10 @@ footer .nav>li>a:hover {
         margin-top: 0px;
     }
     .call2 {
+
         margin-top: 0px;
         padding: 10px;
-        width: 90px;
+        width: 190px;
     }
 
     .navbar-toggler {
