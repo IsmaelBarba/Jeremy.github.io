@@ -373,10 +373,14 @@ footer .nav>li>a:hover {
 }
 
 @media screen and (max-width: 310px) {
+    .logo {
+        width: 100px;
+    }
+
     .call2 {
         padding: 10px;
-        width: 100px;
-        height: 50px;
+        width: 150px;
+        height: 100px;
     }
 
     #call2 {}
