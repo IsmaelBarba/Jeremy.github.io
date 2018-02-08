@@ -271,10 +271,17 @@ footer .nav>li>a:hover {
 @media screen and (max-width: 680px) {
 
 
+.nav-container{
+    width: 75%;
+    height: 110px;
+    margin-left: 10px;
+
+}
+
 
 .navbar-toggler {
-    margin-top: 0px;
-    margin-right: 50px;
+    margin-top: -50px;
+    margin-left: 300px;
     width: 50px;
     background-color: rgb(75, 74, 74);
 }
@@ -284,7 +291,8 @@ footer .nav>li>a:hover {
 .call2 {
     padding: 10px;
     width: 250px;
-    height: 100px;
+    height: 80px;
+    margin-top: -20px;
 }
 
 
@@ -296,9 +304,10 @@ footer .nav>li>a:hover {
 
 .call {
     margin-top: 0px;
-    height: 60px;
+    height: 40px;
     width: 250px;
     background-color: ;
+    margin-top: ;
 }
 
 
@@ -314,13 +323,13 @@ footer .nav>li>a:hover {
     width: 300px;
 }
 
+
 .logo {
-    width: 150px;
+    width: 80px;
     padding: 1px 1px;
     margin-left: -10px;
-    margin-top: 0px;
+    margin-top: -10px;
 }
-
 .aguirre {
    
     font-size: 1.5em;
@@ -348,7 +357,7 @@ footer .nav>li>a:hover {
   
 }
 
-@media screen and (max-width: 420px){
+/* @media screen and (max-width: 420px){
     .call2 {
         padding: 10px;
         width: 100px;
@@ -370,31 +379,65 @@ footer .nav>li>a:hover {
         background-color: rgb(75, 74, 74);
         margin-right: 50px;
     }
-}
+} */
 
-@media screen and (max-width: 310px) {
+@media screen and (max-width: 380px) {
+    /* .nav-container {
+        width: 75%;
+        height: 140px;
+        margin-left: 10px;
+    } */
+    
+    .navbar {
+        width: 360px;
+        height: 170px;
+    }
+
     .logo {
-        width: 50px;
+        height: 80px;
+        width: 80px;
+        margin-top: -40px;
+        margin-left: -30px;
     }
 
     .call2 {
         padding: 10px;
         width: 250px;
         height: 100px;
+        margin-top: -40px;
     }
 
     #call2 {}
 
     .call {
-        width: 50px;
-        margin-left: -100px;
+        width: 250px;
+        height: 50px;
+        margin-left: -28px;
     }
 
     .navbar-toggler {
-        margin-top: 0px;
-        width: 20px;
+       
+        width: 50px;
         background-color: rgb(75, 74, 74);
-        margin-right: 50px;
+        padding: 0px;
     }
 
+    .navbar-toggler-icon {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: middle;
+        content: "";
+        background: no-repeat center center;
+        background-size: 100% 100%;
+        margin-left: -20px;
+    }
+
+    li {
+        font-size: 15.5px;
+    }
+
+    .map {
+        width: 300px;
+    }
     }
