@@ -257,7 +257,9 @@ footer .nav>li>a:hover {
 }
 
 
-
+.map {
+    width: 350px;
+}
 /* @media (min-width: 992px) {
 
 .logo {
@@ -327,7 +329,7 @@ footer .nav>li>a:hover {
 }
 
 .map {
-    width: 340px;
+    width: 300px;
     margin-left: -5px;
 }
 
@@ -370,35 +372,7 @@ footer .nav>li>a:hover {
     margin-top: -40px;
 }
 
-/* .power { */
-   /* background: url('img/black-steel.jpg') no-repeat;*/
-    
-  
-}
 
-/* @media screen and (max-width: 420px){
-    .call2 {
-        padding: 10px;
-        width: 100px;
-        height: 50px;
-    }
-
-    #call2 {
-
-    }
-
-    .call {
-        width: 50px;
-        margin-left: -100px;
-    }
-
-    .navbar-toggler {
-        margin-top: 0px;
-        width: 20px;
-        background-color: rgb(75, 74, 74);
-        margin-right: 50px;
-    }
-} */
 
 @media screen and (max-width: 380px) {
     /* .nav-container {
@@ -477,7 +451,7 @@ footer .nav>li>a:hover {
     }
 
     li {
-        font-size: 15.5px;
+        font-size: 12.5px;
     }
 
     .map {
@@ -510,10 +484,10 @@ footer .nav>li>a:hover {
     }
 
     #one-stop {
-        margin-left: 30px;
         font-family: initial;
-        font-size: 39px;
+        font-size: 22px;
         color: deepskyblue;
+        margin-left: 100px;
     }
 
     }
