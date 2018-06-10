@@ -1,869 +1,1013 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
 
-<head>
+		<!-- Page Title -->
+		<title>Template Generator</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+		<!-- Fonts and Material Icons -->
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Material+Icons" rel="stylesheet" type="text/css"/>
+		
 
-    <title>Aguirre Diesel</title>
+		<!-- Styles -->
+    <link href="css/slides.css" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" rel="stylesheet" type="text/css">
 
-    <!-- Bootstrap core CSS -->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-
-
-<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+		<!-- Custom Styles -->
+    <!--link href="css/custom.css" rel="stylesheet" type="text/css"-->
 
 
 
-<!-- Optional theme -->
 
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom styles for this template -->
-    <link href="half-slider.css" rel="stylesheet">
-    <link href="footer.css" rel="stylesheet">
-    <link href="section1.css" rel="stylesheet">
-    <link href="gallery.css" rel="stylesheet">
+		<!-- Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="js/plugins.js" type="text/javascript" name="plugins"></script>
+		<script src="js/slides.js" type="text/javascript" name="main-scripts"></script>
 
-</head>
+		<!-- Custom Scripts -->
+		<!--script src="js/custom.js" type="text/javascript" name="custom-scripts"></script-->
+		 
+	</head>
+	<body class="slides animated">
+		
 
-<body>
+<!-- SVG Library -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  
+  <symbol id="logo" viewBox="0 0 106 31"><title>Brand Name</title><path class="st0" d="M16.5,10.2l-0.9,0c-0.8,0-1.6,0.6-2.3,1.8c-0.8,1.3-1.3,3.1-1.7,5.4c-0.2,1-0.3,2-0.3,3l-1.6,0l1-10.2l-2,0
+  		L6.1,20.5l-0.8,0c-0.8,0-1.5,0.3-2.1,0.9c-0.8,0.8-1.4,1.9-1.8,3.5c-0.2,1-0.4,2-0.3,3c0,1.2,0.2,2.1,0.5,2.7
+  		c0.3,0.5,0.6,0.7,1,0.7c1.3,0,2.7-2.9,4-8.6l1.3,0L7.1,30l1.5,0l0.7-7.3l1.8,0c0.1,2.7,0.5,4.6,1.3,5.9c0.6,0.9,1.4,1.4,2.4,1.4
+  		l-0.3,3.5c0.1,0,0.2,0,0.3,0c0.8,0,1.3-1.1,1.5-3.1c0.4-4.4,0.7-7.7,0.9-10l-1.6,0L15,27.7c-0.6,0-1.1-0.4-1.5-1.3
+  		c-0.4-1-0.7-2.4-0.7-4.4c0-2.3,0.2-4.4,0.7-6.4c0.5-2,1.1-3.1,1.8-3.1l0.1,0c0,0.4,0,0.7,0,1c0,1,0.1,1.8,0.4,2.4
+  		c0.2,0.6,0.5,0.9,0.8,0.9c0.3,0,0.5-0.3,0.8-0.9c0.2-0.6,0.3-1.5,0.3-2.4c0-1-0.1-1.8-0.4-2.4C17,10.5,16.8,10.2,16.5,10.2z
+  		 M4.5,26.2c-0.5,1.3-0.9,2-1.3,2c-0.3,0-0.4-0.4-0.4-1.2c0-0.9,0.2-1.8,0.5-2.7c0.4-1,1.1-1.5,2.2-1.5C5.3,23.9,4.9,25,4.5,26.2z
+  		 M8,20.4l-0.9,0l1.7-7.9L8,20.4z" />
+  <path class="st0" d="M24.5,10.5c-0.2-0.7-0.5-1-0.9-1c-0.3,0-0.6,0.3-0.8,1c-0.2,0.7-0.4,1.6-0.4,2.6c0,1.1,0.2,2,0.4,2.7
+  		c0.2,0.7,0.5,1,0.9,1c0,1.2-0.2,2.7-0.4,4.3c-0.5,4.2-1.2,6.4-1.9,6.4c-0.2,0-0.4-0.2-0.5-0.6c-0.1-0.4-0.2-1-0.2-1.7
+  		c0-0.6,0-1.3,0.1-2L22,10.1l-3.6,0l-0.6,3.5l2.3,0l-0.9,9.9c-0.1,0.8-0.1,1.5-0.1,2.2c0,1.6,0.2,2.8,0.6,3.6c0.3,0.7,0.7,1,1.2,1
+  		c0.9,0,1.7-0.8,2.2-2.4c0.4-1.2,0.8-3.5,1.2-6.6c0.2-1.2,0.3-2.5,0.4-4c0.1-1.7,0.2-3.1,0.2-4.1C24.9,12.1,24.8,11.2,24.5,10.5z"
+  />
+  <path class="st0" d="M27.6,10c-0.8,0-1.4,0.6-1.9,1.9c-0.6,1.4-0.8,3.3-0.8,5.8c0,1.7,0.2,3,0.6,3.9c0.4,0.8,0.8,1.3,1.4,1.2
+  		c0.3,0,0.6-0.3,0.9-0.8c0.3-0.6,0.4-1.5,0.4-2.6c0-1-0.1-1.8-0.4-2.5c-0.2-0.6-0.5-0.9-0.8-0.9c-0.3,0-0.5,0.3-0.7,0.8
+  		c-0.2,0.5-0.3,1.2-0.4,2.1c-0.2-0.1-0.2-0.6-0.3-1.4c0-1.2,0.1-2.1,0.4-2.9c0.3-0.7,0.6-1.1,1-1.1l2.4,0l-1.3,13.9l-2-1
+  		c0,0-0.1,0-0.1,0c-0.2,0-0.4,0.4-0.6,1.2c-0.1,0.4-0.2,1.2-0.3,2.2l2.9,0c0.9,0,1.4-1.4,1.7-4.2L31.2,10L27.6,10z" />
+  <polygon class="st0" points="33.3,15.3 32,29.7 33.5,29.7 34.8,15.3 	" />
+  <path class="st0" d="M36,22c1.6-2.1,2.3-4.5,2.3-7.2c0-3.2-0.8-4.8-2.3-4.8l-4.2,0l-0.6,3.5l4.3,0c0.7,0,1.1,0.8,1.1,2.5
+  		c0,1.4-0.2,2.7-0.8,3.6c-0.1,0.2-0.3,0.5-0.7,0.9c-0.4,0.5-0.6,0.7-0.7,0.8l0.9,6.1c0.1,0.8,0.2,1.4,0.3,1.7
+  		c0.1,0.4,0.3,0.6,0.5,0.6l1.6,0c0.2,0,0.4-0.2,0.6-0.6c0.2-0.4,0.3-1,0.3-1.7l-1.7,0L36,22z" />
+  <polygon class="st0" points="40.7,15.2 39.3,29.6 40.8,29.6 42.2,15.2 	" />
+  <path class="st0" d="M43.4,21.9c1.6-2.1,2.3-4.5,2.3-7.2c0-3.2-0.8-4.8-2.3-4.8l-4.2,0l-0.6,3.5l4.3,0c0.7,0,1.1,0.8,1.1,2.5
+  		c0,1.4-0.2,2.7-0.8,3.6c-0.1,0.2-0.3,0.5-0.7,0.9c-0.4,0.5-0.6,0.7-0.7,0.8l0.9,6.1c0.1,0.8,0.2,1.4,0.3,1.7
+  		c0.1,0.4,0.3,0.6,0.5,0.6l1.6,0c0.2,0,0.4-0.2,0.6-0.6c0.2-0.4,0.3-1,0.3-1.7l-1.7,0L43.4,21.9z" />
+  <path class="st0" d="M50.7,15.5c0.2,0.7,0.5,1,0.8,1c0.3,0,0.6-0.3,0.8-1c0.2-0.7,0.3-1.4,0.3-2.4c0-0.9-0.1-1.7-0.3-2.4
+  		c-0.2-0.7-0.4-1-0.7-1l-1.3,0c-0.6,0-1.1,0.4-1.6,1.1c-0.6,0.9-0.8,2.3-0.8,4.1c0,1,0.1,2,0.3,3.2c-0.5,0.5-1,1.3-1.4,2.5
+  		c-0.5,1.4-0.7,2.9-0.7,4.6c0,1.5,0.3,2.7,0.7,3.4c0.4,0.6,0.8,0.9,1.3,0.9l3.4,0c0.2,0,0.4-0.2,0.6-0.5c0.2-0.4,0.3-1,0.4-1.7l-3,0
+  		c-0.5,0-0.8-0.1-1-0.2c-0.4-0.3-0.6-1.1-0.6-2.2c0-1.5,0.1-2.7,0.4-3.6c0.1-0.4,0.4-1,0.9-1.7c0.3-0.5,0.5-1.1,0.5-1.6
+  		c0-0.4-0.1-1.1-0.2-1.9c-0.1-0.8-0.1-1.4-0.2-1.9c0-0.5,0-1,0.1-1.5c0.1-0.4,0.2-0.7,0.4-0.7l0.5,0c0,0.3-0.1,0.7,0,1.1
+  		C50.3,14.1,50.5,14.9,50.7,15.5z" />
+  <path class="st0" d="M60.3,9.7l-4,0l-0.6,3.5l4,0c0.5,0,0.9,0.3,1.1,0.9c0.3,0.7,0.4,1.9,0.4,3.5c0,1-0.1,2.2-0.3,3.7
+  		c-0.2,1.7-0.6,3.1-1.1,4.2c-0.5,1.1-1.1,1.7-1.6,1.7L59.3,15l-1.5,0l-1.4,14.4l1.4,0c0.9,0,1.8-0.7,2.6-1.9c0.9-1.4,1.5-3.4,2-5.9
+  		c0.3-1.9,0.5-3.7,0.5-5.4c0-2.2-0.3-3.9-0.9-5.1C61.6,10.2,61,9.7,60.3,9.7z" />
+  <path class="st0" d="M65.8,9.6c-0.8,0-1.4,0.6-1.9,1.9c-0.6,1.4-0.8,3.3-0.8,5.8c0,1.7,0.2,3,0.6,3.9c0.4,0.8,0.8,1.3,1.4,1.2
+  		c0.3,0,0.6-0.3,0.9-0.8c0.3-0.6,0.4-1.5,0.4-2.6c0-1-0.1-1.8-0.4-2.5c-0.2-0.6-0.5-0.9-0.8-0.9c-0.3,0-0.5,0.3-0.7,0.8
+  		c-0.2,0.5-0.3,1.2-0.4,2.1c-0.2-0.1-0.2-0.6-0.3-1.4c0-1.2,0.1-2.1,0.4-2.9c0.3-0.7,0.6-1.1,1-1.1l2.4,0L66.3,27l-2-1
+  		c0,0-0.1,0-0.1,0c-0.2,0-0.4,0.4-0.6,1.2c-0.1,0.4-0.2,1.2-0.3,2.2l2.9,0c0.9,0,1.4-1.4,1.7-4.2l1.5-15.6L65.8,9.6z" />
+  <path class="st0" d="M74.2,15.3c0.2,0.7,0.5,1,0.8,1c0.3,0,0.6-0.3,0.8-1c0.2-0.7,0.3-1.4,0.3-2.4c0-0.9-0.1-1.7-0.3-2.4
+  		c-0.2-0.7-0.4-1-0.7-1l-1.3,0c-0.6,0-1.1,0.4-1.6,1.1c-0.6,0.9-0.8,2.3-0.8,4.1c0,1,0.1,2,0.3,3.2c-0.5,0.5-1,1.3-1.4,2.5
+  		c-0.5,1.4-0.7,2.9-0.7,4.6c0,1.5,0.3,2.7,0.7,3.4c0.4,0.6,0.8,0.9,1.3,0.9l3.4,0c0.2,0,0.4-0.2,0.6-0.5c0.2-0.4,0.3-1,0.4-1.7l-3,0
+  		c-0.5,0-0.8-0.1-1-0.2c-0.4-0.3-0.6-1.1-0.6-2.2c0-1.5,0.1-2.7,0.5-3.6c0.1-0.4,0.4-1,0.9-1.7c0.3-0.5,0.5-1.1,0.5-1.6
+  		c0-0.4-0.1-1.1-0.2-1.9c-0.1-0.8-0.1-1.4-0.2-1.9c0-0.5,0-1,0.1-1.5c0.1-0.4,0.2-0.7,0.4-0.7l0.5,0c0,0.3-0.1,0.7,0,1.1
+  		C73.9,13.8,74,14.6,74.2,15.3z" />
+  <path class="st0" d="M84.9,15.2c0.2-0.7,0.3-1.4,0.3-2.4c0-0.9-0.1-1.7-0.4-2.4c-0.2-0.6-0.5-1-0.8-1l-1,0c-1.7,0-2.6,1.7-2.5,5.1
+  		c0,1,0.1,2.5,0.4,4.4c0.2,1.9,0.4,3.3,0.4,4.3c0,1.5-0.2,2.6-0.5,3.4c-0.3,0.7-0.7,1-1.1,1c-0.4,0-0.7-0.2-1-0.7
+  		c-0.4-0.6-0.6-1.4-0.7-2.5c0-0.9,0.1-1.6,0.4-2.1c0.2-0.4,0.5-0.6,0.8-0.6l1.2,0l-0.3-2.2l-1.6,0c-1.5,0-2.3,1.5-2.3,4.6
+  		c0,2.1,0.5,3.6,1.3,4.6c0.6,0.7,1.3,1.1,2.1,1.1c0.8,0,1.6-0.5,2.2-1.4c0.8-1.3,1.2-3.2,1.2-5.8c0-1.2-0.2-2.9-0.4-5
+  		c-0.3-2.1-0.4-3.5-0.4-4.1c0-1.2,0.2-1.8,0.6-1.8c0,0,0.1,0,0.2,0.1c0,0.3,0,0.6,0,0.8c0,0.9,0.1,1.7,0.4,2.4c0.2,0.7,0.5,1,0.8,1
+  		C84.5,16.2,84.7,15.8,84.9,15.2z" />
+  <path class="st0" d="M86.8,26.6c-0.4-0.3-0.6-1.1-0.6-2.2c0-1.5,0.1-2.7,0.5-3.6c0.1-0.4,0.4-1,0.9-1.7c0.3-0.5,0.5-1.1,0.5-1.6
+  		c0-0.4-0.1-1.1-0.2-1.9c-0.1-0.8-0.1-1.4-0.2-1.9c0-0.5,0-1,0.1-1.5c0.1-0.4,0.2-0.7,0.4-0.7l0.5,0c0,0.3-0.1,0.7,0,1.1
+  		c0,0.9,0.1,1.7,0.4,2.4c0.2,0.7,0.5,1,0.8,1c0.3,0,0.6-0.3,0.8-1c0.2-0.7,0.3-1.4,0.3-2.4c0-0.9-0.1-1.7-0.3-2.4
+  		c-0.2-0.7-0.4-1-0.7-1l-1.3,0c-0.6,0-1.1,0.4-1.6,1.1c-0.6,0.9-0.8,2.3-0.8,4.1c0,1,0.1,2,0.3,3.2c-0.5,0.5-1,1.3-1.4,2.5
+  		c-0.5,1.4-0.7,2.9-0.7,4.6c0,1.5,0.3,2.7,0.7,3.4c0.4,0.6,0.8,0.9,1.3,0.9l3.4,0c0.2,0,0.4-0.2,0.6-0.5c0.2-0.4,0.3-1,0.4-1.7l-3,0
+  		C87.4,26.9,87,26.8,86.8,26.6z" />
+  <path class="st0" d="M97.3,12.3c0.2-0.3,0.3-0.4,0.4-0.4c0,1.1,0.1,2,0.3,2.7c0.2,0.7,0.5,1.1,0.8,1.1c0.3,0,0.5-0.3,0.8-0.9
+  		c0.2-0.7,0.3-1.5,0.3-2.4c0-1.1-0.1-1.9-0.4-2.5c-0.2-0.6-0.5-0.9-0.8-0.9c-1.9,0-3.1,2.4-3.5,7.1l-0.6,6.5
+  		c-0.3,2.9-0.6,4.4-1.1,4.4c-0.2,0-0.4-0.2-0.8-0.6c-0.4-0.4-0.7-0.6-0.8-0.6c-0.3,0-0.6,1.1-0.8,3.4l7.7-0.1c0.6,0,1-0.8,1.1-2.3
+  		l-5,0.1c1.2-1.4,1.8-4,1.9-7.8C96.7,15.1,96.9,12.9,97.3,12.3z" />
+  </g></symbol>
+  
+  <symbol id="logo-icon" viewBox="0 0 50 41"><title>Brand Name</title><path d="M4,12h42c2.2,0,4,1.8,4,4v21c0,2.2-1.8,4-4,4H4c-2.2,0-4-1.8-4-4V16C0,13.8,1.8,12,4,12z"/><path opacity="0.6" d="M45.5,9h-41C3.7,9,3,8.3,3,7.5v0C3,6.7,3.7,6,4.5,6h41C46.3,6,47,6.7,47,7.5v0C47,8.3,46.3,9,45.5,9z"/><path opacity="0.4" d="M7.5,0h35C43.3,0,44,0.7,44,1.5v0C44,2.3,43.3,3,42.5,3h-35C6.7,3,6,2.3,6,1.5v0C6,0.7,6.7,0,7.5,0z"/></symbol>
+  
+  <symbol id="close" viewBox="0 0 30 30"><path d="M15 0c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15zm5.7 19.3c.4.4.4 1 0 1.4-.2.2-.4.3-.7.3s-.5-.1-.7-.3l-4.3-4.3-4.3 4.3c-.2.2-.4.3-.7.3s-.5-.1-.7-.3c-.4-.4-.4-1 0-1.4l4.3-4.3-4.3-4.3c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l4.3 4.3 4.3-4.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-4.3 4.3 4.3 4.3z"/></symbol>
+  
+  <symbol id="close-small" viewBox="0 0 11 11"><path d="M6.914 5.5l3.793-3.793c.391-.391.391-1.023 0-1.414s-1.023-.391-1.414 0l-3.793 3.793-3.793-3.793c-.391-.391-1.023-.391-1.414 0s-.391 1.023 0 1.414l3.793 3.793-3.793 3.793c-.391.391-.391 1.023 0 1.414.195.195.451.293.707.293s.512-.098.707-.293l3.793-3.793 3.793 3.793c.195.195.451.293.707.293s.512-.098.707-.293c.391-.391.391-1.023 0-1.414l-3.793-3.793z"/></symbol>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-inverse bg-inverse fixed-top">
-        <Sdiv class="container nav-container">
-            <a class="navbar-brand" href="#">
-                
-                <img src="img/logo1.png" class="logo">
-                <img src="img/JEREMY.png" class="call2" id="call2">
-                
-            </a>
+  <symbol id="arrow-left" viewBox="0 0 31 72"><path d="M30 72c-.3 0-.6-.1-.8-.4l-29-34c-.3-.4-.3-.9 0-1.3l29-36c.3-.4 1-.5 1.4-.2.4.3.5 1 .2 1.4l-28.5 35.5 28.5 33.4c.4.4.3 1.1-.1 1.4-.2.1-.5.2-.7.2z"/></symbol>
+  
+  <symbol id="arrow-right" viewBox="0 0 31 72"><path d="M1 0c.3 0 .6.1.8.4l29 34c.3.4.3.9 0 1.3l-29 36c-.3.4-1 .5-1.4.2-.4-.3-.5-1-.2-1.4l28.5-35.5-28.5-33.4c-.4-.4-.3-1.1.1-1.4.2-.1.5-.2.7-.2z"/></symbol>
+  
+  <symbol id="back" viewBox="0 0 20 20"><path d="M2.3 10.7l5 5c.4.4 1 .4 1.4 0s.4-1 0-1.4l-3.3-3.3h11.6c.6 0 1-.4 1-1s-.4-1-1-1h-11.6l3.3-3.3c.4-.4.4-1 0-1.4-.2-.2-.4-.3-.7-.3s-.5.1-.7.3l-5 5c-.2.2-.3.5-.3.7 0 .2.1.5.3.7z"/></symbol>
+  
+  <symbol id="menu" viewBox="0 0 22 22"><path d="M1 5h20c.6 0 1-.4 1-1s-.4-1-1-1h-20c-.6 0-1 .4-1 1s.4 1 1 1zm20 5h-20c-.6 0-1 .4-1 1s.4 1 1 1h20c.6 0 1-.4 1-1s-.4-1-1-1zm0 7h-20c-.6 0-1 .4-1 1s.4 1 1 1h20c.6 0 1-.4 1-1s-.4-1-1-1z"/></symbol>
+  
+  <symbol id="share" viewBox="0 0 22 22"><path d="M21 10c-.6 0-1 .4-1 1v7h-18v-7c0-.6-.4-1-1-1s-1 .4-1 1v7c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2v-7c0-.6-.4-1-1-1zM5.5 7.5c.3 0 .5-.1.7-.3l3.8-3.8v9.6c0 .6.4 1 1 1s1-.4 1-1v-9.6l3.8 3.8c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4l-5.5-5.5c-.1-.1-.2-.2-.3-.2-.2-.1-.5-.1-.8 0l-.3.2-5.5 5.5c-.4.4-.4 1 0 1.4.2.2.4.3.7.3z"/></symbol>
+  
+  <symbol id="arrow-down" viewBox="0 0 24 24"><path d="M12 18c-.2 0-.5-.1-.7-.3l-11-10c-.4-.4-.4-1-.1-1.4.4-.4 1-.4 1.4-.1l10.4 9.4 10.3-9.4c.4-.4 1-.3 1.4.1.4.4.3 1-.1 1.4l-11 10c-.1.2-.4.3-.6.3z"/></symbol>
+  
+  <symbol id="arrow-up" viewBox="0 0 24 24"><path d="M11.9 5.9c.2 0 .5.1.7.3l11 10c.4.4.4 1 .1 1.4-.4.4-1 .4-1.4.1l-10.4-9.4-10.3 9.4c-.4.4-1 .3-1.4-.1-.4-.4-.3-1 .1-1.4l11-10c.1-.2.4-.3.6-.3z"/></symbol>
+  
+  <symbol id="arrow-top" viewBox="0 0 24 24"><path d="M20.7 10.3l-8-8c-.4-.4-1-.4-1.4 0l-8 8c-.4.4-.4 1 0 1.4s1 .4 1.4 0l6.3-6.3v15.6c0 .6.4 1 1 1s1-.4 1-1v-15.6l6.3 6.3c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4z"/></symbol>
+
+  <symbol id="drop-down" viewBox="0 0 16 16"><polyline stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="1,5 8,12 15,5" fill="none"></polyline></symbol>
+  
+  <symbol id="play" viewBox="0 0 30 30"><path d="M7 30v-30l22 15z"/></symbol>
+  
+  <symbol id="login" viewBox="0 0 22 22"><path d="M13 2c0 .6.4 1 1 1h6v16h-6c-.6 0-1 .4-1 1s.4 1 1 1h6c1.1 0 2-.9 2-2v-16c0-1.1-.9-2-2-2h-6c-.6 0-1 .4-1 1zm-6.5 3.5c0 .3.1.5.3.7l3.8 3.8h-9.6c-.6 0-1 .4-1 1s.4 1 1 1h9.6l-3.8 3.8c-.2.2-.3.5-.3.7s.1.5.3.7c.4.4 1 .4 1.4 0l5.5-5.5c.1-.1.2-.2.2-.3.1-.2.1-.5 0-.8l-.2-.3-5.5-5.5c-.4-.4-1-.4-1.4 0-.2.2-.3.4-.3.7z"/></symbol>
+  
+  <symbol id="chat" viewBox="0 0 22 22"><path d="M11 22c-.1 0-.3 0-.4-.1-.4-.1-.6-.5-.6-.9v-4h-7.8c-1.2 0-2.2-1-2.2-2.2v-11.6c0-1.2 1-2.2 2.2-2.2h17.7c1.1 0 2.1 1 2.1 2.2v11.7c0 1.2-1 2.2-2.2 2.2h-3.4l-4.7 4.7c-.2.1-.4.2-.7.2zm-8.8-19c-.1 0-.2.1-.2.2v11.7s.1.1.2.1h8.8c.6 0 1 .4 1 1v2.6l3.3-3.3c.2-.2.4-.3.7-.3h3.8c.1 0 .2-.1.2-.2v-11.6c0-.1-.1-.2-.2-.2h-17.6zM5 6h6v2h-6zM5 10h10v2h-10z"/></symbol>
+  
+  <symbol id="mail" viewBox="0 0 22 22"><path d="M19.8 2h-17.6c-1.2 0-2.2 1-2.2 2.2v13.5c0 1.3 1 2.3 2.2 2.3h17.5c1.2 0 2.2-1 2.2-2.2v-13.6c.1-1.2-.9-2.2-2.1-2.2zm-17.6 2h17.5c.2 0 .3.1.3.2v.3l-9 6.3-9-6.3v-.3c0-.1.1-.2.2-.2zm17.6 14h-17.6c-.1 0-.2-.1-.2-.2v-10.9l8.1 5.7c.3.2.6.3.9.3.3 0 .6-.1.9-.3l8.1-5.7v10.9c0 .1-.1.2-.2.2z"/></symbol>
+
+  <symbol id="sound-on" viewBox="0 0 22 22"><path d="M15 15c-.2 0-.4-.1-.6-.2-.4-.3-.5-1-.2-1.4.5-.7.8-1.5.8-2.4s-.3-1.7-.8-2.4c-.3-.4-.2-1.1.2-1.4.4-.3 1.1-.2 1.4.2.8 1 1.2 2.3 1.2 3.6s-.4 2.6-1.2 3.6c-.2.3-.5.4-.8.4zm4 2.3c-.2 0-.5-.1-.7-.2-.4-.4-.5-1-.1-1.4 1.2-1.3 1.8-3 1.8-4.7 0-1.8-.7-3.5-1.9-4.8-.4-.4-.4-1 0-1.4s1-.4 1.4 0c1.6 1.7 2.5 3.9 2.5 6.2 0 2.2-.8 4.3-2.2 6-.2.2-.5.3-.8.3zm-9 2.7c-.2 0-.4-.1-.6-.2l-4.8-3.8h-2.1c-1.4 0-2.5-1.1-2.5-2.5v-5c0-1.4 1.1-2.5 2.5-2.5h2.2l4.7-3.8c.3-.2.7-.3 1.1-.1.3.2.5.5.5.9v16c0 .4-.2.7-.6.9-.1.1-.3.1-.4.1zm-7.5-12c-.3 0-.5.2-.5.5v5c0 .3.2.5.5.5h2.5c.2 0 .4.1.6.2l3.4 2.7v-11.8l-3.4 2.7c-.2.1-.4.2-.6.2h-2.5z"/></symbol>
+  
+  <symbol id="sound-off" viewBox="0 0 22 22"><path d="M10.434 2.098c-.347-.165-.758-.119-1.058.121l-4.726 3.781h-2.154c-1.376 0-2.496 1.12-2.496 2.496v5.009c0 1.376 1.12 2.495 2.496 2.495h2.153l4.726 3.781c.181.145.402.219.625.219.147 0 .295-.032.433-.099.347-.167.567-.516.567-.901v-16c0-.384-.22-.735-.566-.902zm-1.434 14.821l-3.375-2.7c-.178-.142-.398-.219-.625-.219h-2.504c-.274 0-.496-.222-.496-.495v-5.009c0-.274.222-.496.496-.496h2.504c.227 0 .447-.077.625-.219l3.375-2.7v11.838zM19.414 11l2.293-2.293c.391-.391.391-1.023 0-1.414s-1.023-.391-1.414 0l-2.293 2.293-2.293-2.293c-.391-.391-1.023-.391-1.414 0s-.391 1.023 0 1.414l2.293 2.293-2.293 2.293c-.391.391-.391 1.023 0 1.414.195.195.451.293.707.293s.512-.098.707-.293l2.293-2.293 2.293 2.293c.195.195.451.293.707.293s.512-.098.707-.293c.391-.391.391-1.023 0-1.414l-2.293-2.293z"/></symbol>
+  
+  <!-- social -->
+  <symbol id="apple" viewBox="-1 1 24 24"><path d="M17.6 13.8c0-3 2.5-4.5 2.6-4.6-1.4-2.1-3.6-2.3-4.4-2.4-1.9-.2-3.6 1.1-4.6 1.1-.9 0-2.4-1.1-4-1-2 0-3.9 1.2-5 3-2.1 3.7-.5 9.1 1.5 12.1 1 1.5 2.2 3.1 3.8 3 1.5-.1 2.1-1 3.9-1s2.4 1 4 1 2.7-1.5 3.7-2.9c1.2-1.7 1.6-3.3 1.7-3.4-.1-.1-3.2-1.3-3.2-4.9zm-3.1-9c.8-1 1.4-2.4 1.2-3.8-1.2 0-2.7.8-3.5 1.8-.8.9-1.5 2.3-1.3 3.7 1.4.1 2.8-.7 3.6-1.7z"/></symbol>
+
+  <symbol id="dribbble" viewBox="0 0 24 24"><path d="M12 0c-6.7 0-12 5.3-12 12s5.3 12 12 12 12-5.3 12-12-5.3-12-12-12zm7.9 5.7c1.3 1.7 2.1 3.9 2.3 6.1-.4-.1-2.4-.4-4.7-.4-.8 0-1.5 0-2.3.1 0-.1-.1-.3-.3-.5l-.7-1.5c3.7-1.4 5.3-3.4 5.7-3.8zm-7.9-3.8c2.5 0 4.9.9 6.7 2.5-.3.4-1.9 2.3-5.2 3.6-1.6-2.9-3.3-5.3-3.7-5.9.6-.1 1.4-.2 2.2-.2zm-4.4 1c.4.6 2.1 3 3.7 5.8-4.4 1.2-8.2 1.2-9.2 1.2h-.1c.8-3.1 2.9-5.6 5.6-7zm-5.7 9.1v-.3h.3c1.2 0 5.6-.1 10.1-1.5l.8 1.6c-.1 0-.3 0-.4.1-5.1 1.6-7.9 6-8.3 6.7-1.6-1.7-2.5-4.1-2.5-6.6zm10.1 10.1c-2.3 0-4.4-.8-6.1-2.1.3-.5 2.4-4.4 7.9-6.3 1.3 3.6 2 6.7 2.1 7.6-1.2.6-2.6.8-3.9.8zm5.7-1.8c-.1-.8-.7-3.6-2-7.1.7-.1 1.3-.1 2-.1 2.1 0 3.7.4 4.1.5-.3 2.8-1.8 5.2-4.1 6.7z"/></symbol>
+
+  <symbol id="facebook" viewBox="0 0 24 24"><path d="M24 1.3v21.3c0 .7-.6 1.3-1.3 1.3h-6.1v-9.3h3.1l.5-3.6h-3.6v-2.2c0-1.1.3-1.8 1.8-1.8h1.9v-3.2c-.3 0-1.5-.1-2.8-.1-2.8 0-4.7 1.7-4.7 4.8v2.7h-3.1v3.6h3.1v9.2h-11.5c-.7 0-1.3-.6-1.3-1.3v-21.4c0-.7.6-1.3 1.3-1.3h21.3c.8 0 1.4.6 1.4 1.3z"/></symbol>
+   
+  <symbol id="fb-like" viewBox="0 0 20 20"><path d="M0 8v12h5v-12h-5zm2.5 10.8c-.4 0-.8-.3-.8-.8 0-.4.3-.8.8-.8s.8.3.8.8c0 .4-.4.8-.8.8zm3.5-.8h9.5c1.1 0 1.7-1 1.7-1.7 0-.3-.4-1-.4-1 1.4-.3 1.7-1.2 1.7-1.7-.1-.5-.3-.9-.5-1 1-.4 1.5-1.1 1.4-1.9-.1-.8-1-1.5-1-1.5 1-.6.9-1.5.9-1.5-.3-1.3-1.5-1.7-1.7-1.7h-5.6s.3-.5.3-2.4-1.3-3.6-2.6-3.6c0 0-.7.1-1 .3v3.5l-2.7 4.4v9.8z"/></symbol>
+  
+  <symbol id="googlePlus" viewBox="0 1 24 24"><path d="M7.8 13.5h4.6c-.6 2-2.5 3.4-4.6 3.4-2.7 0-4.9-2.2-4.9-4.9s2.2-4.9 4.9-4.9c1.1 0 2.1.3 3 1l1.8-2.4c-1.4-1.1-3-1.6-4.8-1.6-4.3 0-7.9 3.5-7.9 7.9s3.5 7.9 7.9 7.9 7.9-3.5 7.9-7.9v-1.5h-7.9v3zM21.7 11v-2.2h-2v2.2h-2.2v2h2.2v2.2h2v-2.2h2.2v-2z"/></symbol>
+  
+  <symbol id="instagram" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8c0-1.2.2-1.9.3-2.3.2-.6.5-1 .9-1.4.5-.4.9-.6 1.4-.9.4-.1 1.1-.3 2.3-.4h4.8m0-2.2c-3.3 0-3.7 0-4.9.1-1.3 0-2.2.2-3 .5-.7.3-1.4.7-2.1 1.4-.7.7-1.1 1.4-1.4 2.1-.3.8-.5 1.7-.5 3-.1 1.2-.1 1.6-.1 4.9 0 3.3 0 3.7.1 4.9.1 1.3.3 2.1.6 2.9.2.8.6 1.5 1.3 2.2.7.7 1.3 1.1 2.1 1.4.8.3 1.6.5 2.9.6h5s3.7 0 4.9-.1c1.3-.1 2.1-.3 2.9-.6.8-.3 1.5-.7 2.1-1.4.7-.7 1.1-1.3 1.4-2.1.3-.8.5-1.6.6-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.1-.6-2.9-.2-.8-.6-1.5-1.3-2.2-.7-.7-1.3-1.1-2.1-1.4-.8-.3-1.6-.5-2.9-.6h-5zM12 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2-2.8-6.2-6.2-6.2zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"/><circle class="st0" cx="18.4" cy="5.6" r="1.4"/></symbol>
+  
+  <symbol id="linkedin" viewBox="0 0 24 24"><path d="M22.2 0h-20.4c-1 0-1.8.8-1.8 1.7v20.7c0 1 .8 1.7 1.8 1.7h20.5c1 0 1.8-.8 1.8-1.7v-20.7c-.1-.9-.9-1.7-1.9-1.7zm-14.9 20.2h-3.6v-10.9h3.6v10.9zm-1.8-12.4c-1.2 0-2-.8-2-1.9 0-1.1.8-1.9 2.1-1.9 1.2 0 2 .8 2 1.9-.1 1.1-.9 1.9-2.1 1.9zm14.8 12.4h-3.6v-5.8c0-1.5-.5-2.5-1.8-2.5-1 0-1.6.7-1.9 1.3-.1.2-.1.6-.1.9v6.1h-3.6v-10.9h3.6v1.5c.5-.7 1.3-1.8 3.3-1.8 2.4 0 4.2 1.6 4.2 4.9v6.3z"/></symbol>
+
+  <symbol id="medium" viewBox="0 0 24 24"><path d="M7.601 5.357c-2.305-1.137-4.6-2.294-6.899-3.444-.577-.289-.694-.216-.694.43-.001 5.147.005 10.294-.008 15.441-.001.57.224.911.726 1.158 2.126 1.047 4.242 2.116 6.362 3.176l.326.151c.308.115.494-.016.562-.315.032-.14.02-.283.02-.438l.009-15.482c.002-.337-.091-.523-.404-.677zm15.983-.001c-2.369-1.184-4.74-2.366-7.101-3.565-.368-.187-.559-.114-.769.231-1.431 2.356-2.876 4.703-4.328 7.046-.144.233-.15.4-.004.637 1.605 2.593 3.198 5.193 4.795 7.79l.238.36.107-.138c2.426-3.948 4.848-7.898 7.283-11.841.204-.33.01-.405-.221-.52zm.413 16.185c.001-4.694.001-9.387.001-14.081v-.38l-.076-.023-7.257 11.812.257.156c2.095 1.05 4.191 2.098 6.287 3.146l.219.097c.314.112.489-.032.554-.329.027-.128.015-.265.015-.398zm-15.273-14.526c-.001 2.547.003 5.093-.008 7.64-.001.234.105.321.285.411 2.204 1.1 4.405 2.205 6.608 3.307l.333.12-7.183-11.692-.035.214z"/></symbol>
+  
+  <symbol id="pinterest" viewBox="0 0 24 24"><path d="M5.9 13.9c1.2-2-.4-2.5-.6-4-1-6.1 7.1-10.2 11.4-6 2.9 2.9 1 12-3.7 11-4.6-.9 2.2-8.1-1.4-9.5-3-1.1-4.6 3.6-3.2 5.9-.8 4-2.5 7.7-1.8 12.7 2.3-1.7 3.1-4.8 3.7-8.1 1.2.7 1.8 1.4 3.3 1.5 5.5.4 8.6-5.4 7.8-10.7-.7-4.7-5.5-7.1-10.6-6.6-4.1.4-8.1 3.7-8.3 8.3-.1 2.8.7 4.9 3.4 5.5z"/></symbol>
+  
+  <symbol id="stumbleupon" viewBox="0 0 24 24"><path d="M13.3 9.6l1.6.8 2.5-.8v-1.4c0-3-2.4-5.4-5.4-5.4s-5.4 2.4-5.4 5.4v7.5c0 .7-.6 1.3-1.3 1.3s-1.3-.6-1.3-1.3v-3.2h-4v3.2c0 3 2.4 5.4 5.4 5.4s5.4-2.4 5.4-5.4v-7.5c0-.7.6-1.3 1.3-1.3s1.3.6 1.3 1.3l-.1 1.4zm6.6 2.9v3.2c0 .7-.6 1.3-1.3 1.3s-1.3-.6-1.3-1.3v-3.2l-2.5.8-1.6-.8v3.2c0 3 2.4 5.4 5.4 5.4s5.4-2.4 5.4-5.4v-3.2h-4.1z"/></symbol>
+  
+  <symbol id="twitter" viewBox="0 1 24 23"><path d="M21.5 7.6v.6c0 6.6-5 14.1-14 14.1-2.8 0-5.4-.8-7.6-2.2l1.2.1c2.3 0 4.4-.8 6.1-2.1-2.2 0-4-1.5-4.6-3.4.3.1.6.1.9.1.5 0 .9-.1 1.3-.2-2.1-.6-3.8-2.6-3.8-5 .7.4 1.4.6 2.2.6-1.3-.9-2.2-2.4-2.2-4.1 0-.9.2-1.8.7-2.5 2.4 3 6.1 5 10.2 5.2-.1-.4-.1-.7-.1-1.1 0-2.7 2.2-5 4.9-5 1.4 0 2.7.6 3.6 1.6 1-.3 2.1-.7 3-1.3-.4 1.2-1.1 2.1-2.2 2.7 1-.1 1.9-.4 2.8-.8-.6 1.1-1.4 2-2.4 2.7z"/></symbol>
+  
+  <symbol id="tumblr" viewBox="0 0 23 23"><path d="M12.573 4.94v-4.94h-3.188c-.072.183-.11.4-.11.622-.034.107-.072.184-.072.293-.328 1.829-1.28 3.11-2.892 3.807-.476.218-.914.253-1.39.218v3.987h2.342c.039 5.603.039 8.493.039 8.64v.332c.294 2.449 1.573 3.914 3.843 4.463.914.257 1.901.366 2.892.366 1.279-.036 2.525-.256 3.771-.659v-4.685c-.731.22-1.395.402-1.977.583-1.135.333-2.087.113-2.857-.619-.073-.11-.183-.257-.221-.403-.106-.586-.178-1.206-.178-1.795v-6.222h5.083v-3.988h-5.085z"/></symbol>
+
+  <symbol id="xing" viewBox="0 0 24 24"><path d="M3.647 4.74c-.208 0-.384.073-.472.216-.091.148-.077.338.02.531l2.34 4.051v.02l-3.678 6.49c-.096.191-.091.383 0 .531.088.142.244.236.452.236h3.461c.518 0 .767-.349.944-.669l3.737-6.608-2.38-4.15c-.172-.307-.433-.649-.964-.649h-3.46zm14.542-4.74c-.517 0-.741.326-.927.659l-7.702 13.658 4.918 9.023c.172.307.437.659.967.659h3.457c.208 0 .371-.079.459-.221.092-.148.09-.343-.007-.535l-4.88-8.915v-.023l7.664-13.551c.096-.191.098-.386.007-.534-.088-.142-.252-.221-.46-.221h-3.496z"/></symbol>
+  
+  <symbol id="youtube" viewBox="0 0 24 24"><path d="M23.6 6.3c-.3-1.2-1.4-2.2-2.6-2.3-3-.3-6-.3-9-.3s-6 0-9 .3c-1.2.1-2.3 1.1-2.6 2.3-.4 1.8-.4 3.8-.4 5.7 0 1.9 0 3.9.4 5.7.3 1.2 1.4 2.2 2.6 2.3 3 .3 6 .3 9 .3s6 0 9-.3c1.3-.1 2.3-1.1 2.6-2.4.4-1.7.4-3.7.4-5.6 0-1.9 0-3.9-.4-5.7zm-14.1 9v-6.6l6.5 3.3-6.5 3.3z"/></symbol>
+
+  
+
+</svg>
+
+<!-- Navigation -->
+<nav class="side">
+  <div class="navigation">
+    <ul></ul>
+  </div>
+</nav>
+
+<!-- Panel Top #01 -->
+<nav class="panel top forceMobileView">
+  <div class="sections desktop">
+    <div class="left"><a href="#" title="Brand Name"><svg style="width:307px;height:231px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg></a></div>
+    <div class="center">
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#email">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="right"> <a class="button menuButton round" href="#">Profile</a> </div>
+  </div>
+  <div class="sections compact hidden">
+    <div class="left"><a href="#" title="Brand Name"><svg style="width:207px;height:131px;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg></a></div>
+    <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use></svg></span></div>
+  </div>
+</nav>
+
+<!-- Sidebar -->
+<nav class="sidebar deepOrange" data-sidebar-id="1">
+  <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
+  <div class="content">
+    <a href="#" title="Brand Name" class="logo"><svg width="200" height="60"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg></a>
+    <ul class="mainMenu uppercase">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#email">Contact Us</a></li>
+    </ul>
+    <ul class="subMenu">
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Press & Media</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <ul class="social">
+      <li><a href="#"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
+      <li><a href="#"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
+      <li><a href="#"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#googlePlus"></use></svg></a></li>
+      <li><a href="#"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pinterest"></use></svg></a></li>
+    </ul>
+  </div>
+</nav>
 
 
-<!-- Aside Phone ===============================================-->
-<aside id="pc">
-    
-    
-    <a href="tel:979-583-8406">
-        <img src="img/call.png" class="call">
-    </a>
-</aside>
-
-
-<!--=============================================================-->
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-
-
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section2">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section3">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section4">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!--Carousel-->
-
-    <header>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <!-- Slide One - Set the background image for this slide in the line below -->
-                <div class="carousel-item active" style="background-image: url('img/slider22.png')">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>First Slide</h3>
-                        <p>This is a description for the first slide.</p>
-                    </div>
-                </div>
-                <!-- Slide Two - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('img/slider3.jpg')">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>Second Slide</h3>
-                        <p>This is a description for the second slide.</p>
-                    </div>
-                </div>
-                <!-- Slide Three - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('img/slider4.jpg')">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>Third Slide</h3>
-                        <p>This is a description for the third slide.</p>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </header>
-
-<!--IDK-->
-<script>
-$(document).ready(function() {
-  jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 2000  // 2 seconds
-});
-</script>
-
-
-<!--===============================First Section=======================================-->
-
-<section class="container-fluid" id="section1">
-    <h1 class="text-center v-center">
-<a href="https://ismaelbarba.github.io/Jeremy.github.io/"
-    target="_blank">
-    <img src="img/logo1.png" class="logo1b" width="35%">
-</a>
-
-    </h1>
-<span class="service-title text-center v-center" id="one-stop">YOUR ONE STOP,</span><br>
-<span class="service-title text-center v-center" id="one-stop">MOBILE SHOP</span>
-    
-
-<section class="body-container container-fluid">
+<!-- Video Landing Page =================================================================================================== -->
+<section class="slide fade-3" data-name="home">
+  <div class="content">
     <div class="container">
-<div class="panel panel-default">
-    <div class="panel-body">
-        Services That We Provide
-    </div>
-</div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-7 col-md-8 content-wrapper">
-                <div class="entry">
-                    <p>
-                        <span style="font-weight: 400;">We offer extensive professional services for major and minor truck issues.<br>
-                            <strong>Aguirre Diesel Services</strong> is a certified mobile diesel truck service, so we only offer the
-                            best parts and services for your fleet. We are located in the heart of Houston, and service all of southeast Texas.
-                            Our excellent, well-trained team makes it their priority to get your fleet vehicle or owner operators back
-                            on the road quickly. Below are some of the many repair services that we offer:</span>
-                    </p>
-                    <table class="custom_services">
-                        <tbody>
-                            <tr>
-                                <td style="padding-top: 36px;" width="55%">
-                                    <ul class="list-unstyled">
-                                        <li class="first-child">24/7 Roadside or Fleet Service</li>
-                                        <li>A/C &amp; Heating</li>
-                                        <li>Battery Service</li>
-                                        <li>Belts &amp; Hoses</li>
-                                        <li>Brakes</li>
-                                        <li>Buses</li>
-                                        <li>DOT Inspections</li>
-                                        <li>Diesel Service</li>
-                                        <li>DPF and DEF Diagnosis & Repair</li>
-                                        <li>Driveshaft/Axle/Differential</li>
-                                        <li>Electrical</li>
-                                        <li>Farm Equipment</li>
-                                        <li>Fast Turn Around-Time Is Money</li>
-                                        <li>Filter Change</li>
-                                        <li>Fleet Service</li>
-                                        <li>Fluid Flush Exchange</li>
-                                        <li>Heavy Duty Trucks</li>
-                                        <li class="last-child">Hydraulics</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul class="list-unstyled"><br>
-                                        <li class="first-child">Industrial Repair</li>
-                                        <li>Leak Repair</li>
-                                        <li>Load Shifts</li>
-                                        <li>Mobile Repair</li>
-                                        <li>Mufflers &amp; Exhaust</li>
-                                        <li>Oil Change</li>
-                                        <li>Preventative Maintenance</li>
-                                        <li>RVs &amp; Motorhomes</li>
-                                        <li>Radiator &amp; Engine Cooling</li>
-                                        <li>Roadside Assistance</li>
-                                        <li>Scheduled Maintenance</li>
-                                        <li>Seasonal Maintenance</li>
-                                        <li>Steering &amp; Suspension</li>
-                                        <li>Transmission Service</li>
-                                        <li>Transmission/Transfer Case</li>
-                                        <li>Welding</li>
-                                        <li class="last-child">Winch Outs</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>
-                        <!--<strong>Our Top services:</strong>
-
-
-<ul class="list-unstyled">
- 	
-
-<li>24/7/365</li>
-
-
- 	
-
-<li>Fast turn around-time is money</li>
-
-
- 	
-
-<li>Our computer diagnostic software is mobile</li>
-
-
- 	
-
-<li>Our techs take it with them on the road</li>
-
-
-</ul>
-
-
--->
-                        <strong>We offer the best care for all of your service needs.</strong>
-                        <br>
-                        <strong>
-                            <br> Inspections: </strong>
-                    </p>
-                    <ul class="list-unstyled">
-                        <li class="first-child">Commercial D.O.T. Inspections for Semi Truck, Trailers, Medium Duty Trucks</li>
-                        <li>Preventative Maintenance Inspections</li>
-                        <li class="last-child">New Truck Buyer Inspection</li>
-                    </ul>
-                    <p>
-                        <strong>Complete Trailer Repair</strong>
-                        <br> Forced Manual Re-Gens 24/7</p>
-                    <p>
-                        <strong>Computer Repair Software</strong>
-                        <br> For Kenworth, Peterbilt, Volvo,
-                        <br> Freightliner, International, Hino, Mitsubishi, Isuzu, Fuso &amp; Most RV’s &amp; Buses
-                        <br> Towing, Winch-Outs &amp; Load Shifts. Towing to our facility with no out of pocket expense!</p>
-                    <p>
-                        <strong>PM SERVICE $275!</strong>
-                        <br> Includes: Synthetic Blend Oil, 3 Filters (Fuel, Oil &amp; Fuel/Water) Grease Fittings,Check Tires,
-                        Check Diff &amp; Trans Fluids, Check Air Filter.</p>
-                    <p>Includes Most Semi Truck Engines. Most Medium Duty Trucks Are Less Call (979) 583-8406 Special Good
-                        M-F/8-4</p>
-                    <p>From overhuals to transmissions, we service all makes and models from Freightliner to Great Dane to Peterbilt
-                        to buses. We also offer heavy equipment and RV repair. And to keep those reefers real cold we service Thermal King
-                         & Carrier units. Our knowledgeable Technicians repair
-                        your vehicle and get you back on the road!</p>
-                </div>
-            </div>
-
-
-            <div class="col-xs-12 col-sm-5 col-md-4 sidebar-container" id="sidebar-container">
-                <div class="sidebar">
-                    <aside id="text-7" class="widget widget_text">
-                        <div class="textwidget">
-                            <div class="sidebar-header">
-                                <h3>Contact information</h3>
-                            </div>
-
-                            <br>
-                            
-                            <div class="sidebar-content">
-                                <!-- Map-->
-                                <a href="https://www.google.com/maps/place/3521+Suiter+Way,+Pasadena,+TX+77503/@29.6935536,-95.162339,17z/data=!3m1!4b1!4m5!3m4!1s0x8640a20becd341f5:0x2301e344a3ea3fb8!8m2!3d29.6935536!4d-95.160145">
-                                <img class="map" alt="" src="img/map2.png">
-                                </a>
-                                <!-- Shop Address/Phone/Email-->
-
-                                <div class="sidebar-contact">
-                                    <p>
-                                        
-                                        <i class="fa fa-map-marker" id="marker"></i>3521 Sulter 
-                                     Way. Houston, TX 77037</p>
-                                        
-
-                                    <p>
-                                        <a href="tel:979-583-8406">
-                                        <i class="fa fa-whatsapp" id="whatsapp"></i>
-                                        <span>1 (979) 583-8406 </span>
-                                        </a>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa fa-fax" id="fax"></i>
-                                        <!-- <span>(979) ???-????</span> -->
-                                    </p>
-
-                                    <p>
-                                        <i class="fa fa-envelope-o"></i>
-                                        <span>
-                                            <a href="contact/" style="color:#333;">Email:</a><br>
-                                       
-                                        <span>
-                                            <a href="contact/" style="color: #333;"> info@aguirrediesel.com</a>
-                                        </span>
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Shop Business Hours  -->
-
-                            <div class="sidebar-header" id="hours">
-                                <h3>Hours</h3>
-                            </div>
-
-                            <div class="sidebar-content">
-                                <div class="working-hours">
-                                    <p>
-                                        <b>Open 24/7/365</b>
-                                    </p>
-                            <!--<p>Office/Shop is Open Mon-Fri 7:30 a.m. to 5:30 p.m.</p>-->
-                                    <!--
- <p><span class="left-col">Monday</span><span class="right-col">7:30 am - 5:30 pm</span></p>
-            
-<p><span class="left-col">Tuesday</span><span class="right-col">7:30 am - 5:30 pm</span></p>
-            
-<p><span class="left-col">Wednesday</span><span class="right-col">7:30 am - 5:30 pm</span></p>
-            
-<p><span class="left-col">Thursday</span><span class="right-col">7:30 am - 5:30 pm</span></p>
-            
-<p><span class="left-col">Friday</span><span class="right-col">7:30 am - 5:30 pm</span></p>
- -->
-                                    <!--<p><span class="left-col">Saturday</span><span class="right-col">Closed</span></p>
-            
-<p><span class="left-col">Sunday</span><span class="right-col">Closed</span></p> -->
-
-                                    <!--<p><b>Primary Hours:  Open 24/7</b></p>-->
-                                    <p>Available 24/7/365 via roadside &amp; towing
-                                        <br> Our tech can meet you at the shop 24/7/365 as long as you call ahead</p>
-                                </div>
-                            </div>
-                            <div class="sidebar-header">
-                                <h3>Payment</h3>
-                            </div>
-                            <div class="sidebar-content">
-                                <img src="http://radiusccc6.com/res911new/wp-content/uploads/sites/295/2017/10/cub.jpg">
-                                <img src="http://radiusccc6.com/res911new/wp-content/uploads/sites/295/2017/10/discover.png">
-                                <img src="http://radiusccc6.com/res911new/wp-content/uploads/sites/295/2017/10/mastercard.jpg">
-                                <img src="http://radiusccc6.com/res911new/wp-content/uploads/sites/295/2017/10/visa.jpg">
-                                <br>
-                                <br>
-                                <p>
-                                    <span class="left-col">Comchek, Check, Cash</span>
-                                </p>
-                            </div>
-                            <!-- Appointment Section-->
-                            <div class="sidebar-footer">
-
-                                <a href="tel:979-583-8406" class="sidebar-btn">APPOINTMENT</a>
-                            </div>
-                        </div>
-                    </aside>
-                </div>
-                <!-- end sidebar -->
-            </div>
+      <div class="wrap">
+        <h1 class="light fix-10-12 ae-5">Aguirre Diesel</h1>
+        <div class="ae-7">
+          <p>
+            <a href="tel:979-583-8406" target="_blank">Give US A Call Now!</a>
+          </p>
         </div>
-    </div>
-</section>
-    <!--/container-->
-</section>
-
-
-
-<!--=========SECTION #2 =================================-->
-<section class="container-fluid section2" id="section2">
-
-<div class="container container3">
-    <h2 class="text-center">Putting In Work</h2>
-    <div class="lightbox-gallery">
-        <div>
-            <img src="img/work-truck.png" class="gallery2" alt="image">
-        </div>
-        <div>
-            <img src="http://placehold.it/300/d2f1b2/222&text=image2" class="gallery2" alt="image">
-        </div>
-        <div>
-            <img src="img/heavy.jpg" class="gallery2" alt="image">
-        </div>
-        <div>
-            <img src="img/old1.jpg" class="gallery2" alt="img">
-        </div>
-        <div>
-            <img src="img/truck-repair.jpg" class="gallery2" alt="image">
-        </div>
-        <div>
-            <img src="img/fix.jpg" class="gallery2" alt="image">
-        </div>
-    </div>
-</div>
-
-
-<div class="text-center github-link">
-
-    <a class="github-link" href="https://github.com/humbl3man/lightboxify" target="_blank">
-        <i class="fa fa-github"></i> Github Source Code</a>
-
-</div>
-
-    <!-- <div class="row">
-        <div class="col-sm-8 col-sm-offset-2 text-center">
-            <h1>About Aguirre Diesel Services</h1>
-            <br>
-            <p class="lead">Bootstrap is a free collection of tools for creating websites and web applications. It contains HTML and CSS-based
-                design templates for typography, forms, buttons, navigation and other interface components, as well as optional
-                JavaScript extensions. It is the No.1 project on GitHub with 65,000+ stars and 23,800 forks (as of March
-                2014) [1] and has been used by NASA and MSNBC, among many others..</p>
-            <br>
-            <i style="font-size:120px" class="fa fa-camera fa-5x"></i>
-            <p>Big 'ol Camera Icon</p>
-        </div>
-    </div> -->
-</section>
-
-<!-- Section #3 -->
-<section class="container-fluid power" id="section3">
-<div class="reasons">
-    <div class="row power">
-    <div class="col left-side">
-    <div class="inside">
-        <div class="text">
-            <h2 class="reasonto">8 Reasons to Choose
-                <span class="powerflo">Aguirre Diesel</span>
-            </h2>
-            <p>
-                <a href="/contact-us" class="btn schedule">Schedule Your Service</a>
-            </p>
-            <p>
-                <a href="https://www.bbb.org/houston/business-reviews/mobile-truck-repair/aguirre-diesel-services-in-pasadena-tx-90047303"
-                    target="_blank">
-                    <img src="img/bbb.png"
-                       class="bbb" width="25%">
-                </a>
-                
-            </p>
-        </div>
-    </div>
-    </div>
-
-    <div class="col right-side">
-    <div class="reason-right">
-        <a href="#" target="blank">
-            <img src="img/clipboard2.png" class="clipboard">
- <!--https://www.mechanicshub.com/wp-content/uploads/mechanics-hub-slider1-bg.jpg-->
+        <div Class="ae-7">
+        <a href="tel:979-583-8406">
+          <img src="assets/img/call.png" class="call">
         </a>
+        </div>
+          <!--<svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#play"></use>
+          </svg>-->
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-    </div>
-
+  </div>
+  <div class="background youtube" class="player" style="background-image:url(https://youtu.be/CY7-2Yj20lM);" data-property="{videoURL:'https://youtu.be/CY7-2Yj20lM', containment:'self', startAt: 5, stopAt: 100, showControls:false, autoPlay:true, loop:true, mute:true, opacity:1, quality:'highres', stopMovieOnBlur:false, remember_last_time: true}"></div>
 </section>
 
-<!-- Section #4 -->
-<section class="container-fluid" id="section4">
-    <h2 class="text-center">Change this Content. Change the world.</h2>
-    <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-            <img src="/assets/example/bg_smartphones.jpg" class="img-responsive center-block ">
-            <p class="text-center">Images will scale down proportionately as browser width narrows.</p>
-        </div>
-    </div>
-</section>
+<!-- Preloader -->
+<div class="loadingIcon">
+  <svg class="loading-icon" id="loading-circle" viewBox="0 0 18 18">
+    <circle class="circle" opacity=".1" stroke="#fff" stroke-width="2" stroke-miterlimit="10" cx="9" cy="9" r="8" fill="none"></circle>
+    <circle class="dash" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="1,100"
+      cx="9" cy="9" r="8" fill="none"></circle>
+  </svg>
+</div>
 
-<section class="container-fluid" id="section5">
-    <div class="col-sm-10 col-sm-offset-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 col-xs-12">
-                    <div class="list-group">
-                        <a href="#" class="list-group-item active">
-                            <h2 class="list-group-item-heading">Basic</h2>
-                            <h6>Free to get started</h6>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Option 100 - more about this</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Option 2 - this is more about this</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Option 3 GB</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Option 4</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Feature</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Feature</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <button class="btn btn-primary btn-lg btn-block">Get Started</button>
-                        </a>
-                    </div>
-                </div>
-                <!--/left-->
+<!--Adding Background Images=======================================================================================================-->
 
-                <div class="col-sm-4 col-xs-12">
-                    <div class="list-group text-center">
-                        <a href="#" class="list-group-item active">
-                            <h2 class="list-group-item-heading">Better</h2>
-                            <h6>Most popular plan</h6>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Option 200 - more about this</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Option 2 - this is more about this</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Option 5 GB</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Option 6</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Feature</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Feature</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <button class="btn btn-default btn-lg btn-block">$10 per month</button>
-                        </a>
-                    </div>
-                </div>
-                <!--/middle-->
-
-                <div class="col-sm-4 col-xs-12">
-                    <div class="list-group text-right">
-                        <a href="#" class="list-group-item active">
-                            <h2 class="list-group-item-heading">Best</h2>
-                            <h6>For enterprise grade</h6>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Option 100 - more about this</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Option 2 - this is more about this</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Option 8 GB</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Option 10</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Unlimited</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <p class="list-group-item-text">Unlimited</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <button class="btn btn-default btn-lg btn-block">$20 per month</button>
-                        </a>
-                    </div>
-                </div>
-                <!--/right-->
-
-            </div>
-            <!--/row-->
-        </div>
-        <!--/container-->
-    </div>
-</section>
-
-<section class="container-fluid" id="section6">
-    <h2 class="text-center">Do you see what I mean?</h2>
-    <p class="text-center lead">Add some compelling information here</p>
-    <img src="/assets/example/bg_iphone.png" class="img-responsive center-block ">
-
-</section>
-
-<section class="container" id="section7">
-    <h1 class="text-center">Social Media Fascination</h1>
-    <div class="row">
-        <!--fontawesome icons-->
-        <div class="col-sm-1 col-sm-offset-2 col-xs-4 text-center">
-            <i class="fa fa-github fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-foursquare fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-facebook fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-pinterest fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-google-plus fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-twitter fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-dribbble fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-instagram fa-4x"></i>
-        </div>
-    </div>
-    <!--/row-->
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <br>
-            <br>
-            <p>
-                <a href="http://www.bootstrapzero.com/bootstrap-template/sectionalize">Get the code for this template.</a>
-            </p>
-        </div>
-    </div>
-</section>
-
-<footer id="footer">
+<section class="slide scenic fade slideshow">
+  <div class="content">
     <div class="container">
-        <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-3 column">
-                <h4>Information</h4>
-                <ul class="nav">
-                    <li>
-                        <a href="about-us.html">Products</a>
-                    </li>
-                    <li>
-                        <a href="about-us.html">Services</a>
-                    </li>
-                    <li>
-                        <a href="about-us.html">Benefits</a>
-                    </li>
-                    <li>
-                        <a href="elements.html">Developers</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xs-6 col-md-3 column">
-                <h4>Follow Us</h4>
-                <ul class="nav">
-                    <li>
-                        <a href="#">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="#">Facebook</a>
-                    </li>
-                    <li>
-                        <a href="#">Google+</a>
-                    </li>
-                    <li>
-                        <a href="#">Pinterest</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xs-6 col-md-3 column">
-                <h4>Contact Us</h4>
-                <ul class="nav">
-                    <li>
-                        <a href="#">Email</a>
-                    </li>
-                    <li>
-                        <a href="#">Headquarters</a>
-                    </li>
-                    <li>
-                        <a href="#">Management</a>
-                    </li>
-                    <li>
-                        <a href="#">Support</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xs-6 col-md-3 column">
-                <h4>Customer Service</h4>
-                <ul class="nav">
-                    <li>
-                        <a href="#">About Us</a>
-                    </li>
-                    <li>
-                        <a href="#">Delivery Information</a>
-                    </li>
-                    <li>
-                        <a href="#">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="#">Terms &amp; Conditions</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--/row-->
+      <div class="wrap">
+
+        <p>Slideshow enabled (5 pics)</p>
+
+      </div>
     </div>
-</footer>
+  </div>
+  <!-- your background images are here -->
+  <div class="background shown" style="background-image:url(assets/img/img-1.jpg)"></div>
+  <div class="background" style="background-image:url(assets/img/img-2.jpg)"></div>
+  <div class="background" style="background-image:url(assets/img/img-3.jpg)"></div>
+  <div class="background" style="background-image:url(assets/img/img-4.jpg)"></div>
+  <div class="background" style="background-image:url(assets/img/img-5.jpg)"></div>
+</section>
+
+
+
+<!--==========Second Section============================================================-->
+<section class="slide fade">
+  
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+
+        <!--<p>No slideshow</p>-->
+
+      </div>
+    </div>
+  </div>
+  <div class="background shown" style="background-image:url(assets/img/tools.png)"></div>
+  
+</section>
+
+
+
+
+<!--============Third Section===========================================================================================================-->
+<section class="slide fade gridShowcase kenBurns" data-name="services">
+  <div class="content">
+    <div class="container service">
+      <div class="wrap slow">
+        <div class="fix-12-12 left">
+
+          <span class="powerflo">SERVICES</span>
+          <h3 class="sourceSans">THIS IS WHAT WE DO!</h3>
+          <ul class="grid">
+            <li class="col-8-12">
+              <p>Here at Aguirre Diesel Service Houston, our mobile truck and trailer repair service serves you day and night. We
+                offer full service truck and trailer services 24 hours a day at our shop in Pasadena, TX (near Houston).
+                Our technicians are ASE certified and we are up to date on all the latest light weight and heavy duty diesel
+                engines from Cummins, Caterpillar, Detroit Diesel, Mercedes and more. If you are having issues on the interstate,
+                give us a call at (979) 583-8406 and we’ll send our mobile truck repair service. Tire Repair? Truck Engine
+                Troubles? Any type of 18 wheeler repair in Houston and surrounding cities, we can help. Call now and we will
+                come to you ASAP.</p>
+            </li>
+            <!--<li class="col-6-12"><p>Flowering occurs between October and December in its native range, with plants at higher elevations flowering later than ones at lower altitude. The crimson flowerheads, known as inflorescences, are about 9 cm (3.5 in) in diameter. They are composed of 36 to 60 individual flowers with green to pink bracts, which may be up to 3 cm (1.2 in) long.</p></li>-->
+          </ul>
+
+
+          <span class="powerflo">GENERAL SERVICES OFFERED</span>
+          <h3 class="sourceSans">QUICK RESPONSE CALL OUTS!</h3>
+          <ul class="grid">
+            <li class="col-4-12">
+              <p>
+                <br>24/7/365
+                <br>A/C &amp; Heating
+                <br>Battery Service
+                <br>Belts &amp; Hoses
+                <br>Brakes
+                <br>DOT Inspections
+                <br>Diesel Service
+                <br>DPF and DEF Diagnosis and Repair
+                <br>Driveshaft/Axle/Differential
+                <br>Electrical
+                <br>Fast Turn Around-Time Is Money
+                <br>Filter Change
+                <br>Fleet Service
+                <br>Fluid Flush Exchange
+                <br>Heavy Duty Trucks
+                <br>Hydraulics
+                <br>Greese Everything
+              </p>
+            </li>
 
 
 
 
 
 
-    
+            <li class="col-4-12">
+              <p>
+                <br>Industrial Repair
+                <br>Leak Repair
+                <br>Load Shifts
+                <br>Mobile Repair
+                <br>Mufflers &amp; Exhaust
+                <br>Oil Change
+                <br>Preventative Maintenance
+                <br>RVs &amp; Motorhomes
+                <br>Radiator &amp; Engine Cooling
+                <br>Roadside Assistance
+                <br>Scheduled Maintenance
+                <br>Seasonal Maintenance
+                <br>Steering &amp; Suspension
+                <br>Transmission Service
+                <br>Transmission/Transfer Case
+                <br>Welding
+                <br>Reefer Repair
+              </p>
+            </li>
 
-    <!-- Footer -->
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="footer-section">
-    <div class="footer">
-        <div class="container">
-            <div class="col-md-4 footer-one">
-                <div class="foot-logo">
-                    <img src="http://smarthead.ancorathemes.com/wp-content/uploads/2016/12/footer_logo.png">
-                </div>
 
-                <p>Providing Life Changing Experiences Through Education. Class That Fit Your Busy Life. Closer to Home
+            <div class="sidebar-content">
+              <!-- Map-->
+
+              <img class="map" alt="" src="http://www.city-data.com/w8/bgm23470.gif" />
+
+              <!-- Shop Address/Phone/Email-->
+
+              <div class="sidebar-contact">
+                <p>
+                  <i class="fa fa-map-marker"></i>3521 Suiter Way Pasadena, TX 77503</p>
+
+                <p>
+                  <i class="fa fa-whatsapp"></i>
+                  <span>(979) 583-8406 </span>
                 </p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/">
-                        <i id="social-fb" class="fa fa-facebook-square fa-3x social"></i>
-                    </a>
-                    <a href="https://twitter.com/">
-                        <i id="social-tw" class="fa fa-twitter-square fa-3x social"></i>
-                    </a>
-                    <a href="https://plus.google.com/">
-                        <i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i>
-                    </a>
-                    <a href="mailto:bootsnipp@gmail.com">
-                        <i id="social-em" class="fa fa-envelope-square fa-3x social"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-2 footer-two">
-                <h5>Quick Links</h5>
-                <ul>
-                    <li>
-                        <a href="#"> About Us</a>
-                    </li>
-                    <li>
-                        <a href="#"> Our News</a>
-                    </li>
-                    <li>
-                        <a href="#"> Our Services</a>
-                    </li>
-                    <li>
-                        <a href="#"> Contact Us</a>
-                    </li>
-                </ul>
 
-            </div>
-            <div class="col-md-2 footer-three">
-                <h5>Services</h5>
-                <ul>
-                    <li>
-                        <a href="#"> About Us</a>
-                    </li>
-                    <li>
-                        <a href="#"> Our News</a>
-                    </li>
-                    <li>
-                        <a href="#"> Our Services</a>
-                    </li>
-                    <li>
-                        <a href="#"> Contact Us</a>
-                    </li>
-                </ul>
+                <p>
+                  <i class="fa fa-fax"></i>
+                  <span>(979) 999-9999</span>
+                </p>
 
-            </div>
-            <div class="col-md-4 footer-four">
-                <h5>Contact Us</h5>
-                <img src="img/goldlogo.png">
-
+                <p>
+                  <i class="fa fa-envelope-o"></i>
+                  <span>
+                    <a href="contact/" style="color:red;">Email Us </a>
+                  </span>
+                </p>
+              </div>
             </div>
 
+            <!-- Shop Business Hours  -->
 
+            <div class="sidebar-header">
+              <h3>Hours:</h3>
+            </div>
 
+            <div class="sidebar-content">
+              <div class="working-hours">
+                <p>
+                  <b>Available 24/7/365</b>
+                </p>
+                <!--<p>Office/Shop is Open Mon-Fri 7:30 a.m. to 5:30 p.m.</p>-->
+                <!--
+             <p><span class="left-col">Monday</span><span class="right-col">7:30 am - 5:30 pm</span></p>
+                        
+            <p><span class="left-col">Tuesday</span><span class="right-col">7:30 am - 5:30 pm</span></p>
+                        
+            <p><span class="left-col">Wednesday</span><span class="right-col">7:30 am - 5:30 pm</span></p>
+                        
+            <p><span class="left-col">Thursday</span><span class="right-col">7:30 am - 5:30 pm</span></p>
+                        
+            <p><span class="left-col">Friday</span><span class="right-col">7:30 am - 5:30 pm</span></p>
+             -->
+                <!--<p><span class="left-col">Saturday</span><span class="right-col">Closed</span></p>
+                        
+            <p><span class="left-col">Sunday</span><span class="right-col">Closed</span></p> -->
 
-
-
-            <div class="clearfix"></div>
+                <!--<p><b>Primary Hours:  Open 24/7</b></p>-->
+                <p> Via roadside & towing
+                  <br> Our tech can meet you at any location 24/7/365 as long as you call ahead</p>
+              </div>
+            </div>
+            <div class="sidebar-header">
+              <h3>Payment:</h3>
+            </div>
+            <div class="sidebar-content">
+              <img src="http://radiusccc6.com/res911new/wp-content/uploads/sites/295/2017/10/cub.jpg">
+              <img src="http://radiusccc6.com/res911new/wp-content/uploads/sites/295/2017/10/discover.png">
+              <img src="http://radiusccc6.com/res911new/wp-content/uploads/sites/295/2017/10/mastercard.jpg">
+              <img src="http://radiusccc6.com/res911new/wp-content/uploads/sites/295/2017/10/visa.jpg">
+              <br>
+              <br>
+              <p>
+                <span class="left-col">Comchek, EFS, FleetOne</span>
+              </p>
+            </div>
+            <!-- Appointment Section-->
+            <div class="sidebar-footer">
+              <a href="appointment/" class="sidebar-btn">SET UP AN APPOINTMENT TODAY!</a>
+            </div>
         </div>
-    </div>
 
+        </ul>
+
+
+
+        <h3> PM SPECIALS </h3>
+        <ul class="grid noSpaces">
+          <li class="col-6-12">
+            <p>PM SERVICE $275! Includes: Synthetic Blend Oil, 3 Filters (Fuel, Oil & Fuel/Water) Grease Fittings,Check Tires,
+              Check Diff & Trans Fluids, Check Air Filter. Includes Most Semi Truck Engines. Most Medium Duty Trucks Are
+              Less Call (979) 583-8406. We run Special deals on fleets for service and maintenance. PMs run M-F/8-4. We will
+              make sure your fleet stays up to par and is ready to go when the call comes.</p>
+          </li>
+
+          <li class="col-6-12">
+            <p>From ENGINE OVERHUALS to TRANSMISSION REBUILDS, we service all makes and models from Freightliner to Great Dane
+              to Peterbilt to Prevost buses. We also offer heavy equipment and RV repair. Our knowledgeable Technicians repair
+              your vehicle and get you back on the road! Flowering occurs between October and December in its native range,
+              with plants at higher elevations flowering later.</p>
+          </li>
+        </ul>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<!-- Preloader -->
+<div class="loadingIcon">
+  <svg class="loading-icon" id="loading-circle" viewBox="0 0 18 18">
+    <circle class="circle" opacity=".1" stroke="#fff" stroke-width="2" stroke-miterlimit="10" cx="9" cy="9" r="8" fill="none"></circle>
+    <circle class="dash" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="1,100"
+      cx="9" cy="9" r="8" fill="none"></circle>
+  </svg>
 </div>
-<div class="footer-bottom">
+
+<!--======================================= END OF 3RD SECTION =================================================================-->
+
+
+
+<!-- Slide 1 (#01) -->
+
+      
+
+
+<!-- 2) copy styles -->
+<style>
+  .items-container li.hidden {
+    display: none;
+  }
+
+.slideshow .background {
+     opacity:0;
+     visibility:hidden;
+     -webkit-transition:1s;
+     transition:1s;
+  }
+  .slideshow .background.shown {
+     opacity:1;
+     visibility:visible;
+  }
+</style>
+
+<!--================================================ 4TH SECTION ======================================================================-->
+<!-- 3) Copy layout
+- add class items-container on <ul> grid element
+- add class hidden on col- element that should be hidden
+- add showMore button below grid </ul> element
+-->
+<!-- 3) Copy layout
+- add class items-container on <ul> grid element
+- add class hidden on col- element that should be hidden
+- add showMore button below grid </ul> element
+-->
+<section class="slide whiteSlide">
+  <div class="content">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-6 ">
-                <div class="copyright-text">
-                    <p>CopyRight © 2017 Digital All Rights Reserved</p>
-                </div>
-            </div>
-            <!-- End Col -->
-            <div class="col-sm-6  ">
-                <div class="copyright-text pull-right">
-                    <p>
-                        <a href="#">Home</a> |
-                        <a href="#">Privacy</a> |
-                        <a href="#">Terms & Conditions</a> |
-                        <a href="#">Refund Policy</a>
-                    </p>
-                </div>
+      <div class="wrap top">
 
-            </div>
-            <!-- End Col -->
+        <div class="fix-10-12 toCenter">
+          <h1 class="ae-1">Our Gallery of Us Putting in Work</h1>
+          <div class="ae-2">
+            <p>Aguirre Diesel is more than just a few mechanics standing around providing great mobile deisel services. Here at Aguirre Diesel we are also family</p>
+          </div>
         </div>
+        <div class="fix-12-12">
+          <ul class="grid later fixedSpaces equal left margin-top-5 items-container controller popupTrigger" data-popup-id="items-popup"
+            data-slider-id="items-popup">
+            <li class="col-4-12 ae-3 fromCenter">
+              <a href="#" class="box-67">
+                <div class="thumbnail-67">
+                  <img src="assets/img/img-1.png" class="wide gallery" />
+                </div>
+                <div class="name-67 equalElement table wide">
+                  <div class="cell">
+                    <div class="category-67">Great Service</div>
+                    <div class="title-67">Mobile Service</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="col-4-12 ae-4 fromCenter">
+              <a href="#" class="box-67">
+                <div class="thumbnail-67">
+                  <img src="assets/img/fix.jpg" class="wide gallery" />
+                </div>
+                <div class="name-67 equalElement table wide">
+                  <div class="cell">
+                    <div class="category-67">Repairs</div>
+                    <div class="title-67">Truck Repairs</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="col-4-12 ae-5 fromCenter">
+              <a href="#" class="box-67">
+                <div class="thumbnail-67">
+                  <img src="assets/img/tools.png" class="wide gallery" />
+                </div>
+                <div class="name-67 equalElement table wide">
+                  <div class="cell">
+                    <div class="category-67">Logo</div>
+                    <div class="title-67">Check Us Out</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <!-- hidden items below this line -->
+
+            <li class="col-4-12 hidden">
+              <a href="#" class="box-67">
+                <div class="thumbnail-67">
+                  <img src="assets/img/heavy.jpg" class="wide gallery" />
+                </div>
+                <div class="name-67 equalElement table wide">
+                  <div class="cell">
+                    <div class="category-67">Getting Dirty</div>
+                    <div class="title-67">Fixing Trucks</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="col-4-12 hidden">
+              <a href="#" class="box-67">
+                <div class="thumbnail-67">
+                  <img src="assets/img/bbb.png" class="wide gallery" />
+                </div>
+                <div class="name-67 equalElement table wide">
+                  <div class="cell">
+                    <div class="category-67">The BBB</div>
+                    <div class="title-67">Rated A</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="col-4-12 hidden">
+              <a href="#" class="box-67">
+                <div class="thumbnail-67">
+                  <img src="assets/img/logo1.png" class="wide gallery" />
+                </div>
+                <div class="name-67 equalElement table wide">
+                  <div class="cell">
+                    <div class="category-67">Logo</div>
+                    <div class="title-67">Aguirre Diesel</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+      <!--<li class="col-4-12 hidden">
+              <a href="#" class="box-67">
+                <div class="thumbnail-67">
+                  <img src="assets/img/67-01.jpg" class="wide gallery" />
+                </div>
+                <div class="name-67 equalElement table wide">
+                  <div class="cell">
+                    <div class="category-67">Baking</div>
+                    <div class="title-67">Artisan Rye Bread</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="col-4-12 hidden">
+              <a href="#" class="box-67">
+                <div class="thumbnail-67">
+                  <img src="assets/img/67-02.jpg" class="wide gallery" />
+                </div>
+                <div class="name-67 equalElement table wide">
+                  <div class="cell">
+                    <div class="category-67">Cooking</div>
+                    <div class="title-67">Blueberry Muffin</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="col-4-12 hidden">
+              <a href="#" class="box-67">
+                <div class="thumbnail-67">
+                  <img src="assets/img/67-03.jpg" class="wide gallery" />
+                </div>
+                <div class="name-67 equalElement table wide">
+                  <div class="cell">
+                    <div class="category-67">Preparing</div>
+                    <div class="title-67">Chopped Parsley</div>
+                  </div>
+                </div>
+              </a>
+            </li>-->
+            
+          </ul>
+          <div class="center">
+            <a class="button round small red showMore ae-6">Show more showcases
+              <i class="material-icons right">arrow_downward</i>
+            </a>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </div>
+</section>
+<!--=======================================================================================================================-->
+<div class="popup animated" data-popup-id="items-popup">
+  <div class="close">
+    <svg>
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
+    </svg>
+  </div>
+  <div class="content">
+    <div class="container">
+      <div class="wrap spaces">
+
+        <ul class="slider fix-10-12 clickable popupContent ae-1 fromCenter disableSelect" data-slider-id="items-popup">
+          <li class="selected">
+            <img src="assets/img/img-1.png" class="wide" />
+          </li>
+          <li>
+            <img src="assets/img/fix.jpg" class="wide" />
+          </li>
+          <li>
+            <img src="assets/img/tools.png" class="wide" />
+          </li>
+
+          <li>
+            <img src="assets/img/heavy.jpg" class="wide" />
+          </li>
+          <li>
+            <img src="assets/img/67-02.jpg" class="wide" />
+          </li>
+          <li>
+            <img src="assets/img/67-03.jpg" class="wide" />
+          </li>
+
+          <li>
+            <img src="assets/img/67-01.jpg" class="wide" />
+          </li>
+          <li>
+            <img src="assets/img/67-02.jpg" class="wide" />
+          </li>
+          <li>
+            <img src="assets/img/67-03.jpg" class="wide" />
+          </li>
+
+          <li>
+            <img src="assets/img/67-01.jpg" class="wide" />
+          </li>
+          <li>
+            <img src="assets/img/67-02.jpg" class="wide" />
+          </li>
+          <li>
+            <img src="assets/img/67-03.jpg" class="wide" />
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
 </div>
 
-    <!-- Bootstrap core JavaScript -->
+<!--============================== END OF 4TH SECTION ========================================================================-->
 
 
 
-<script src="scroll.js"></script>
-<script src="gallery.js"></script>
+ 
+
+<!-- =============================== Section 5 =========================== -->
+<section class="slide fade kenBurns">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+      
+
+
+
+
+        <div class="fix-10-12">
+
+          <h1 class="text-center v-center">
+            <a href="https://ismaelbarba.github.io/Jeremy.github.io/" target="_blank">
+              <img src="assets/img/semi-logos.png" class="logo1b" width="100%">
+            </a>
+          
+          </h1>
+
+          <div class="fix-6-12">
+            <!--<svg height="150" class="wide ae-1"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg>-->
+            <span class="powerflo">Brands We Work On</span>
+          </div>
+          <div class="ae-2">
+            <p class="hero cropBottom"></p>
+          </div>
+        </div>
+          
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(assets/img/grey.jpg)"></div>
+</section>
+<!--=================================== Sectiobn 5 =======================================================-->
+<!-- Slide 3 (#33) -->
+<section class="slide fade kenBurns">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+          
+        <div class="fix-12-12">
+          <ul class="grid">
+            <li class="col-4-12 left cell-33"><br>
+              <h1 class="ae-2 fromLeft">Today's Specials</h1>
+              <div class="ae-2 fromLeft"><p> </p></div>
+              <ul class="tabs controller uppercase ae-3 fromCenter" data-slider-id="33-2">
+                <li class="selected">A/C REPAIR</li>
+                <li>PM SERVICE</li>
+                <li>THE TRUCK</li>
+              </ul>
+            </li>
+            <li class="col-8-12 left ae-4 fromRight">
+              <ul class="slider" data-slider-id="33-2">
+                <li class="selected">
+                  <img class="ipad-33"  data-action="zoom" width="1200" src="assets/img/ac.png"/>
+                </li>
+                <li data-action="zoom">
+                  <img class="ipad-33" data-action="zoom" width="1200" src="assets/img/ipad-pm.png"/>
+                </li>
+                <li data-action="zoom">
+                  <img class="ipad-33" data-action="zoom" width="1200" src="assets/img/ipad-50.png"/>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(assets/img/img-3311.png)"></div>
+</section>
+
+
+
+
+<!-- ===================       Slide 4 (#37)       =================== -->
+<section class="slide fade kenBurns" data-name="why"><img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+
+
+<div class="fix-12-12 left">
+
+  
+  <ul class="grid">
+    <li class="col-6-12">
+      <h1 class="reasonto">8 Reasons to Choose
+        <span class="powerflo">Aguirre Diesel</span>
+      </h1>
+      <p>
+        <a href="#email" class="btn schedule">Schedule Your Service</a>
+      </p>
+      <p>
+        <a href="https://www.bbb.org/houston/business-reviews/mobile-truck-repair/aguirre-diesel-services-in-pasadena-tx-90047303"
+          target="_blank">
+          <img src="assets/img/bbb.png" class="bbb" width="70%">
+        </a>
+      
+      </p>
+    </li>
+    <li class="col-6-12">
+      <h1><i class="material-icons md-48">verified_user</i>High Quality Work</h1>
+      <h1><i class="material-icons md-48">verified_user</i>Skilled Mechanics</h1>
+      <h1><i class="material-icons md-48">verified_user</i>Fast Turn Around</h1>
+      <h1><i class="material-icons md-48">verified_user</i>Quality Parts</h1>
+      <h1><i class="material-icons md-48">verified_user</i>Superior Service</h1>
+      <h1><i class="material-icons md-48">verified_user</i>Fair Prices</h1>
+      <h1><i class="material-icons md-48">verified_user</i>Fixed Right</h1>
+      <h1><i class="material-icons md-48">verified_user</i>Honest Advice</h1>
+      <!--<img src="assets/img/clipboard2.png" class="bbb" width="70%">-->
+    </li>
+  </ul>
+
+</div>
+
+
+
+        
+
+        
+        <div class="fix-10-12">
+          <div>
+            <!--<img src="assets/img/clipboard2.png" alt="Clipboard" width="500" height="600">-->
+          </div>
+          <h1 class="huge ae-2 quote">"The expectations of life depend upon diligence; the mechanic that would perfect his work must first sharpen his tools."</h1>
+          <h3 class="confucius">-Confucius</h3>
+        </div>
+             
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(assets/img/metal.jpg)"></div>
+</section>
+
+
+<!-- Slide 8 (#55)            EMAIL SECTION ========================================== -->
+<section class="slide fade kenBurns" data-name="email">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+      
+        <h1 class="ae-1">Say Hello</h1>
+        <div class="ae-2"><p>Feel free to ask anything about our services.</p></div>
+        <div class="fix-5-12 margin-top-6">
+          <div class="pad shadow selected ae-3">
+            <form action="ajax-email.php" id="contact-form" method="post" class="wide center" data-ajax-form="true">
+              <div class="label ae-4 cropTop"><label class="cropTop opacity-5" for="name55">Your name</label></div>
+              <input class="stroke ae-5 wide" id="name55" type="name" name="name" placeholder="Name" required/>
+              <div class="label ae-6"><label class="opacity-5" for="email55">Email address</label></div>
+              <input class="stroke ae-7 wide" id="email55" type="email" name="email" placeholder="Email" required/>
+              <div class="label ae-8"><label class="opacity-5" for="message55">Message</label></div>
+              <textarea class="left ae-9" id="message55" type="text" name="message" placeholder="Message" required></textarea>
+              <input class="button wide pink ae-10 margin-top-2 cropBottom" type="submit" name="submit" value="Send message" data-success-text="Done!" data-success-class="green"/>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>  
+  <div class="background" style="background-image:url(assets/img/img-55.jpg)"></div>
+</section>
+
+<!-- Panel Bottom #14 -->
+<nav class="panel bottom forceMobileView">
+  <div class="sections desktop">
+    <div class="left"><a href="#" title="Brand Name"><svg style="width:167px;height:101px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg></a></div>
+    <div class="right">
+      <ul class="menu crop uppercase">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#email">Contact Us</a></li>
+        <li><a href="http://facebook.com/" target="_blank"><svg class="facebookIcon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
+        <li><a href="http://instagram.com/" target="_blank"><svg class="instagramIcon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#instagram"></use></svg></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="sections compact hidden">
+    <div class="left"><a href="#" title="Brand Name"><svg style="width:107px;height:31px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg></a></div>
+    <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="2"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use></svg></span></div>
+  </div>
+</nav>
+
+<!-- Sidebar -->
+<nav class="sidebar deepRed" data-sidebar-id="2">
+  <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
+  <div class="content">
+    <a href="#" title="Brand Name" class="logo"><svg width="120" height="50"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg></a>
+    <ul class="mainMenu uppercase">
+      <li><a href="#service">Services</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#email">Contact Us</a></li>
+    </ul>
+    <ul class="subMenu">
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Press & Media</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#email">Contact Us</a></li>
+    </ul>
+    <ul class="social">
+      <li><a href="#"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
+      <li><a href="#"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
+      <li><a href="#"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#googlePlus"></use></svg></a></li>
+      <li><a href="#"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pinterest"></use></svg></a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Preloader -->
+<div class="loadingIcon"><svg class="loading-icon" id="loading-circle" viewBox="0 0 18 18"><circle class="circle" opacity=".1" stroke="#fff" stroke-width="2" stroke-miterlimit="10" cx="9" cy="9" r="8" fill="none"></circle><circle class="dash" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="1,100" cx="9" cy="9" r="8" fill="none"></circle></svg></div>
+      
+<!-- 1) copy script -->
+<script>
+  $(function () {
+    var numberOfItemsToShow = 6;
+
+    $('.showMore').click(function () {
+
+      if (window.isScroll) {
+        $('html, body').animate({ scrollTop: $(".showMore").offset().top }, 500);
+      } else {
+        $('.content').animate({ scrollTop: $(".showMore").position().top }, 500);
+      }
+
+      if ($('.items-container li.hidden').length <= numberOfItemsToShow) {
+        $('.showMore').remove();
+      }
+
+      $('.items-container li.hidden:lt(' + numberOfItemsToShow + ')').removeClass('hidden').find('.done').removeClass('done');
+    });
+  });
+</script>
 
 <script>
-
-    /* activate scrollspy menu */
-$('body').scrollspy({
-  target: '#navbar-collapsible',
-  offset: 50
-});
-
-/* smooth scrolling sections */
-$('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top - 50
-        }, 1000);
-        return false;
+  $(function () {
+    setInterval(function () {
+      if ($('.slideshow').hasClass('selected')) {
+        $('.slideshow.selected .background.shown').removeClass('shown').nextOrFirst('.background').addClass('shown');
       }
-    }
-});
-
-
+    }, 4000); // <-- set your interval here
+  });
 </script>
-</body>
 
+<script src="https://cdn.rawgit.com/pupunzi/jquery.mb.YTPlayer/9afc0466/dist/jquery.mb.YTPlayer.min.js"></script>
+<script>
+  $(function () {
+    if (!window.isMobile) {
+      $(".background.youtube").mb_YTPlayer();
+    }
+  });
+</script>
+	</body>
 </html>

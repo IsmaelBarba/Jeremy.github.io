@@ -1,0 +1,127 @@
+.map {
+    width: 250px;
+}
+
+.gridShowcase li p {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.grid {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.service {
+    margin-top: 30px;
+}
+
+.call {
+    width: 400px;
+}
+
+.gallery {
+    height: 300px;
+}
+
+.logo1 {
+    height: 800px;
+    width: 100%;
+}
+
+.pad {
+    border-radius: 30px;
+    background-color: darkslategrey;
+}
+
+form label,
+form .label {
+    display: block;
+    font-size: 22px;
+    margin-top: 12px;
+    margin-bottom: 7px;
+    color: lime;
+}
+
+.powerflo {
+    display: block;
+    font-size: 7.0rem;
+    color: white;
+}
+
+.reasonto {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    color: red;
+    font-family: "Oswald", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 5rem;
+    line-height: 1.1;
+}
+
+.left-side {
+    margin-left: 20px;
+    
+}
+
+.schedule {
+    display: inline-block;
+    margin-bottom: 45px;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background: #e70000;
+    color: #fff !important;
+    font-family: "Oswald", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 15px;
+    line-height: 1.0;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+    color: lime;
+}
+
+h1,
+.h1 {
+    font-size: 40px;
+    line-height: 1.05;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: -0.036em;
+}
+
+h1.huge,
+.h1.huge {
+    font-size: 45px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin-bottom: 40px;
+    color: cornflowerblue;
+}
+
+.confucius {
+    font-size: 50px;
+    margin-bottom: 12px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    color: burlywood;
+}
+
+.quote {
+    font-size: 30px;
+}
+
+.logob {
+    width: 100%;
+}
